@@ -1,5 +1,5 @@
 ## Title : m0609_gear_assemble
-## Time : 2026-11-11 19:09:28
+## Time : 2026-11-11 19:52:17
 Global_Height = 424.31
 Global_Home = posx(367.39,6.87,424.06,146.04,179.96,145.97)
 Global_LG_2 = posx(610.71,-56.20,274.64,158.81,179.07,160.10)
@@ -94,3 +94,221 @@ def gear1():
     global Global_LG_2_1
     global Global_LG_3_1
     global Global_RG_2_1
+    global Global_RG_1_1
+    global Global_RG_3_1
+    global Global_RG_Center_1
+    global Global_LG_Center_1
+    global Global_centerpoint
+    # MoveLNode
+    movel(Global_LG_1_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveLNode
+    movel(Global_LG_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # CallNode
+    global _alias_sub_name_grip_close
+    _alias_sub_name_grip_close()
+    # MoveLNode
+    movel(Global_LG_1_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveLNode
+    movel(Global_RG_1_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveLNode
+    movel(Global_RG_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # CallNode
+    global _alias_sub_name_grip_open
+    _alias_sub_name_grip_open()
+    # MoveNode
+    movel(Global_RG_1_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    
+_alias_sub_name_gear1 = gear1
+
+def gear2():
+    global Global_Height
+    global Global_Home
+    global Global_LG_2
+    global Global_LG_1
+    global Global_LG_3
+    global Global_LG_Center
+    global Global_RG_2
+    global Global_RG_1
+    global Global_RG_3
+    global Global_RG_Center
+    global Global_LG_1_1
+    global Global_LG_2_1
+    global Global_LG_3_1
+    global Global_RG_2_1
+    global Global_RG_1_1
+    global Global_RG_3_1
+    global Global_RG_Center_1
+    global Global_LG_Center_1
+    global Global_centerpoint
+    # MoveLNode
+    movel(Global_LG_2_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveLNode
+    movel(Global_LG_2, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # CallNode
+    global _alias_sub_name_grip_close
+    _alias_sub_name_grip_close()
+    # MoveLNode
+    movel(Global_LG_2_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveLNode
+    movel(Global_RG_2_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveLNode
+    movel(Global_RG_2, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # CallNode
+    global _alias_sub_name_grip_open
+    _alias_sub_name_grip_open()
+    # MoveNode
+    movel(Global_RG_2_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    
+_alias_sub_name_gear2 = gear2
+
+def gear3():
+    global Global_Height
+    global Global_Home
+    global Global_LG_2
+    global Global_LG_1
+    global Global_LG_3
+    global Global_LG_Center
+    global Global_RG_2
+    global Global_RG_1
+    global Global_RG_3
+    global Global_RG_Center
+    global Global_LG_1_1
+    global Global_LG_2_1
+    global Global_LG_3_1
+    global Global_RG_2_1
+    global Global_RG_1_1
+    global Global_RG_3_1
+    global Global_RG_Center_1
+    global Global_LG_Center_1
+    global Global_centerpoint
+    # MoveLNode
+    movel(Global_LG_3_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveLNode
+    movel(Global_LG_3, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # CallNode
+    global _alias_sub_name_grip_close
+    _alias_sub_name_grip_close()
+    # MoveLNode
+    movel(Global_LG_3_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveLNode
+    movel(Global_RG_3_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveLNode
+    movel(Global_RG_3, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # CallNode
+    global _alias_sub_name_grip_open
+    _alias_sub_name_grip_open()
+    # MoveNode
+    movel(Global_RG_3_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    
+_alias_sub_name_gear3 = gear3
+
+def center():
+    global Global_Height
+    global Global_Home
+    global Global_LG_2
+    global Global_LG_1
+    global Global_LG_3
+    global Global_LG_Center
+    global Global_RG_2
+    global Global_RG_1
+    global Global_RG_3
+    global Global_RG_Center
+    global Global_LG_1_1
+    global Global_LG_2_1
+    global Global_LG_3_1
+    global Global_RG_2_1
+    global Global_RG_1_1
+    global Global_RG_3_1
+    global Global_RG_Center_1
+    global Global_LG_Center_1
+    global Global_centerpoint
+    # MoveNode
+    movel(Global_LG_Center_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveNode
+    movel(Global_LG_Center, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # CallNode
+    global _alias_sub_name_grip_close
+    _alias_sub_name_grip_close()
+    # MoveNode
+    movel(Global_LG_Center_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveNode
+    movel(Global_RG_Center_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveNode
+    movel(Global_centerpoint, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # CallNode
+    global _alias_sub_name_checkforce
+    _alias_sub_name_checkforce()
+    # CallNode
+    global _alias_sub_name_grip_open
+    _alias_sub_name_grip_open()
+    # MoveLNode
+    movel(Global_RG_Center_1, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveLNode
+    movel(Global_Home, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    
+_alias_sub_name_center = center
+
+def checkforce():
+    global Global_Height
+    global Global_Home
+    global Global_LG_2
+    global Global_LG_1
+    global Global_LG_3
+    global Global_LG_Center
+    global Global_RG_2
+    global Global_RG_1
+    global Global_RG_3
+    global Global_RG_Center
+    global Global_LG_1_1
+    global Global_LG_2_1
+    global Global_LG_3_1
+    global Global_RG_2_1
+    global Global_RG_1_1
+    global Global_RG_3_1
+    global Global_RG_Center_1
+    global Global_LG_Center_1
+    global Global_centerpoint
+    # ComplianceNode
+    task_compliance_ctrl()
+    set_stiffnessx([3000.00, 3000.00, 3000.00, 200.00, 200.00, 200.00],time=0.0)
+    # ForceNode
+    set_desired_force([0.00, 0.00, -15.00, 0.00, 0.00, 0.00],[0,0,1,0,0,0],time=0.0,mod=DR_FC_MOD_REL)
+    # RepeatNode
+    while True:
+        if check_force_condition(axis=DR_AXIS_Z, min=10, ref=DR_TOOL):
+            move_periodic(amp=[0.00, 0.00, 0.00, 0.00, 0.00, 10.00], period=[0.00, 0.00, 0.00, 0.00, 0.00, 2.00], atime=1.00, repeat=5, ref=0)
+            if check_position_condition(axis=DR_AXIS_Z, max=291.4, ref=DR_BASE):
+                stop(DR_QSTOP)
+                
+            break
+            
+        else:
+            pass
+        
+    # ComplianceNode
+    release_compliance_ctrl()
+    # ForceNode
+    release_force(time=0.0)
+    
+_alias_sub_name_checkforce = checkforce
+
+set_singular_handling(DR_AVOID)
+set_velj(60.0)
+set_accj(100.0)
+set_velx(250.0, 80.625, DR_OFF)
+set_accx(1000.0, 322.5)
+gLoop195217438 = 0
+while gLoop195217438 < 1:
+    # MoveLNode
+    movel(Global_Home, radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # CallNode
+    _alias_sub_name_grip_open()
+    # CallNode
+    _alias_sub_name_gear1()
+    # CallNode
+    _alias_sub_name_gear2()
+    # CallNode
+    _alias_sub_name_gear3()
+    # CallNode
+    _alias_sub_name_center()
+    gLoop195217438 = gLoop195217438 + 1
