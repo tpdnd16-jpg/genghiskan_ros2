@@ -1,0 +1,96 @@
+## Title : m0609_gear_assemble
+## Time : 2026-11-11 19:09:28
+Global_Height = 424.31
+Global_Home = posx(367.39,6.87,424.06,146.04,179.96,145.97)
+Global_LG_2 = posx(610.71,-56.20,274.64,158.81,179.07,160.10)
+Global_LG_1 = posx(517.52,-10.10,274.01,163.86,178.89,165.58)
+Global_LG_3 = posx(604.12,46.83,274.44,162.74,179.05,164.57)
+Global_LG_Center = posx(575.08,-7.98,274.04,146.42,179.32,148.29)
+Global_RG_2 = posx(310.09,-56.53,272.92,150.76,179.09,153.11)
+Global_RG_1 = posx(217.28,-11.64,272.66,146.57,178.60,148.72)
+Global_RG_3 = posx(307.98,45.54,272.98,152.52,178.24,154.59)
+Global_RG_Center = posx(278.89,-9.36,272.69,142.33,177.98,144.22)
+Global_LG_1_1 = posx(517.52,-10.10,424.31,163.86,178.89,165.58)
+Global_LG_2_1 = posx(610.71,-56.20,424.31,158.81,179.07,160.10)
+Global_LG_3_1 = posx(604.12,46.83,424.31,162.74,179.05,164.57)
+Global_RG_2_1 = posx(310.09,-56.53,424.31,150.76,179.09,153.11)
+Global_RG_1_1 = posx(217.28,-11.64,424.31,146.57,178.60,148.72)
+Global_RG_3_1 = posx(307.98,45.54,424.31,152.52,178.24,154.59)
+Global_RG_Center_1 = posx(278.89,-9.36,424.31,142.33,177.98,144.22)
+Global_LG_Center_1 = posx(575.08,-7.98,424.31,146.42,179.32,148.29)
+Global_centerpoint = posx(274.90,-2.24,305.69,2.44,-179.50,2.23)
+
+
+def grip_close():
+    global Global_Height
+    global Global_Home
+    global Global_LG_2
+    global Global_LG_1
+    global Global_LG_3
+    global Global_LG_Center
+    global Global_RG_2
+    global Global_RG_1
+    global Global_RG_3
+    global Global_RG_Center
+    global Global_LG_1_1
+    global Global_LG_2_1
+    global Global_LG_3_1
+    global Global_RG_2_1
+    global Global_RG_1_1
+    global Global_RG_3_1
+    global Global_RG_Center_1
+    global Global_LG_Center_1
+    global Global_centerpoint
+    # SetNode
+    set_digital_output(1,OFF)
+    # SetNode
+    set_digital_output(2,ON)
+    # WaitNode
+    wait(0.50)
+    
+_alias_sub_name_grip_close = grip_close
+
+def grip_open():
+    global Global_Height
+    global Global_Home
+    global Global_LG_2
+    global Global_LG_1
+    global Global_LG_3
+    global Global_LG_Center
+    global Global_RG_2
+    global Global_RG_1
+    global Global_RG_3
+    global Global_RG_Center
+    global Global_LG_1_1
+    global Global_LG_2_1
+    global Global_LG_3_1
+    global Global_RG_2_1
+    global Global_RG_1_1
+    global Global_RG_3_1
+    global Global_RG_Center_1
+    global Global_LG_Center_1
+    global Global_centerpoint
+    # SetNode
+    set_digital_output(1,ON)
+    # SetNode
+    set_digital_output(2,OFF)
+    # WaitNode
+    wait(0.50)
+    
+_alias_sub_name_grip_open = grip_open
+
+def gear1():
+    global Global_Height
+    global Global_Home
+    global Global_LG_2
+    global Global_LG_1
+    global Global_LG_3
+    global Global_LG_Center
+    global Global_RG_2
+    global Global_RG_1
+    global Global_RG_3
+    global Global_RG_Center
+    global Global_LG_1_1
+    global Global_LG_2_1
+    global Global_LG_3_1
+    global Global_RG_2_1
