@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 112 114" width="112" height="114">
+<line x1="50" y1="30" x2="50" y2="16" stroke="#4a4a5a" stroke-width="3" stroke-linecap="round"/>
+<path d="M50 18 C42 10 45 3 50 8 C55 3 58 10 50 18 Z" fill="#FF5C8A" stroke="#4a4a5a" stroke-width="2"/>
+<rect x="32" y="86" width="36" height="20" rx="7" fill="#FFB3C6" stroke="#4a4a5a" stroke-width="2"/>
+<rect x="8" y="48" width="9" height="18" rx="3" fill="#F08DA8" stroke="#4a4a5a" stroke-width="2"/>
+<rect x="83" y="48" width="9" height="18" rx="3" fill="#F08DA8" stroke="#4a4a5a" stroke-width="2"/>
+<rect x="15" y="30" width="70" height="56" rx="16" fill="#FFB3C6" stroke="#4a4a5a" stroke-width="2"/>
+<rect x="24" y="40" width="52" height="36" rx="10" fill="#2c2c3a"/>
+<path d="M39 60 C31 53 34 46 39 51 C44 46 47 53 39 60 Z" fill="#FF5C8A"/>
+<path d="M61 60 C53 53 56 46 61 51 C66 46 69 53 61 60 Z" fill="#FF5C8A"/>
+<path d="M45 66 Q50 71 55 66" fill="none" stroke="#FFC2D4" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M92 26 C87 21 89 17 92 20 C95 17 97 21 92 26 Z" fill="#FF5C8A"/>
+<path d="M10 22 C6 18 8 15 10 17 C12 15 14 18 10 22 Z" fill="#FF8FA3"/>
+</svg>
