@@ -1,0 +1,32 @@
+running develop
+Removing /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/lib/python3.12/site-packages/3farm-bridge.egg-link (link to .)
+running egg_info
+writing ../../build/3farm_bridge/3farm_bridge.egg-info/PKG-INFO
+writing dependency_links to ../../build/3farm_bridge/3farm_bridge.egg-info/dependency_links.txt
+writing entry points to ../../build/3farm_bridge/3farm_bridge.egg-info/entry_points.txt
+writing requirements to ../../build/3farm_bridge/3farm_bridge.egg-info/requires.txt
+writing top-level names to ../../build/3farm_bridge/3farm_bridge.egg-info/top_level.txt
+reading manifest file '../../build/3farm_bridge/3farm_bridge.egg-info/SOURCES.txt'
+writing manifest file '../../build/3farm_bridge/3farm_bridge.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/build
+creating /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/build/lib
+creating /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/build/lib/3farm_bridge
+copying 3farm_bridge/3farm_bridge.py -> /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/build/lib/3farm_bridge
+copying 3farm_bridge/__init__.py -> /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/build/lib/3farm_bridge
+running install
+running install_lib
+creating /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/lib/python3.12/site-packages/3farm_bridge
+copying /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/build/lib/3farm_bridge/3farm_bridge.py -> /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/lib/python3.12/site-packages/3farm_bridge
+copying /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/build/lib/3farm_bridge/__init__.py -> /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/lib/python3.12/site-packages/3farm_bridge
+byte-compiling /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/lib/python3.12/site-packages/3farm_bridge/3farm_bridge.py to 3farm_bridge.cpython-312.pyc
+byte-compiling /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/lib/python3.12/site-packages/3farm_bridge/__init__.py to __init__.cpython-312.pyc
+running install_data
+copying resource/3farm_bridge -> /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/share/ament_index/resource_index/packages
+copying package.xml -> /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/share/3farm_bridge
+running install_egg_info
+Copying ../../build/3farm_bridge/3farm_bridge.egg-info to /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/lib/python3.12/site-packages/3farm_bridge-0.0.0-py3.12.egg-info
+running install_scripts
+Installing 3farm_bridge script to /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/lib/3farm_bridge
+writing list of installed files to '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/install.log'
