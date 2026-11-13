@@ -34,14 +34,7 @@
 <!-- <img src="assets/demo.gif" width="600"/> -->
 
 ### 업장 구성
-
-```
-                    [ 프린터 3층 ]
-                    [ 프린터 2층 ]
-                    [ 프린터 1층 ]
-  [수령대]            [로봇팔]             [보드 적재대]
-  손님 캐릭터                               남은 보드 n장
-```
+<img src="assets/common/3d_place.png" width="100%" align="center"/>
 
 | 주문 모양 | 출력 시간 |
 |:---:|:---:|
@@ -159,34 +152,23 @@ flowchart LR
 
 ### 빌드 & 실행
 
+실제 구현은 `app/` 아래 있습니다 (`app/backend`, `app/virtual-robot`, `app/frontend`). 처음 클론한 뒤
+아래 스크립트 두 개로 실행할 수 있습니다 (자세한 설명·수동 실행 방법은 [`app/README.md`](app/README.md) 참고).
+
 ```bash
 # 1. 저장소 클론
 git clone https://github.com/<org>/<repo>.git
-cd <repo>
-cp .env.example .env
+cd <repo>/app
 
-# 2. DB 실행 (MySQL 8.0)
-docker compose up -d mysql
+# 2. 최초 1회 설정 (venv/npm install, .env 생성, MySQL(Docker) 기동, DB 스키마 생성)
+./scripts/setup.sh
 
-# 3. 백엔드 실행
-cd backend
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-alembic upgrade head          # 스키마 생성 + 시드 (프린터 3대, 보드 10장)
-uvicorn app.main:app --reload --port 8000
-
-# 4. 가상 로봇 실행 (새 터미널)
-cd virtual_robot
-pip install -r requirements.txt
-python main.py --server ws://localhost:8000/ws/bridge
-
-# 5. 프론트엔드 실행 (새 터미널)
-cd frontend
-npm install
-npm run dev                   # http://localhost:5173
+# 3. 그 이후로는 매번 이것만 실행 (Docker 컨테이너 안 떠있으면 기동 + 백엔드·가상로봇·프론트엔드 실행)
+./scripts/run.sh
 ```
 
-> 한 번에 띄우려면 `docker compose up -d` (mysql, backend, virtual-robot) 후 프론트엔드만 `npm run dev`로 실행하세요.
+- 백엔드: http://localhost:8000, 프론트엔드: http://localhost:5173
+- 종료는 `./scripts/run.sh`가 실행 중인 터미널에서 `Ctrl+C`.
 
 ---
 
@@ -216,24 +198,12 @@ npm run dev                   # http://localhost:5173
 
 <div align="center">
 
-| <img src="/assets/robots/drained.svg" width="100"/> | <img src="/assets/robots/excited.svg" width="100"/> | <img src="/assets/robots/hello.svg" width="100"/> | <img src="/assets/robots/love.svg" width="100"/> | <img src="/assets/robots/sleepy.svg" width="100"/> |
+| <img src="assets/robots/hello.svg" width="100"/> | <img src="assets/robots/love.svg" width="100"/> | <img src="assets/robots/excited.svg" width="100"/> | <img src="assets/robots/sleepy.svg" width="100"/> | <img src="assets/robots/drained.svg" width="100"/> |
 |:---:|:---:|:---:|:---:|:---:|
-| **남규진** | **백세웅** | **최희범** | **나연수** | **류병옥** |
 | [남규진](https://github.com/skarbwls419-art) | [백세웅](https://github.com/tpdnd16-jpg) | [최희범](https://github.com/kcodeusers) | [나연수](https://github.com/I-Am-Na) | [류병옥](https://github.com/devrereg) |
-| <img src="assets/robots/hello.svg" width="40"/> | <img src="assets/robots/love.svg" width="40"/> | <img src="assets/robots/excited.svg" width="40"/> | <img src="assets/robots/sleepy.svg" width="40"/> | <img src="assets/robots/drained.svg" width="40"/> |
 | ROS 2 개발 | ROS 2 개발 | ROS 2 개발 | ROS 2 개발 | 웹 · 서버 · 가상 로봇 |
 
 </div>
-
-### 📋 팀원 목록
-
-| 로봇 | 이름 | 역할 | GitHub |
-|:----:|------|------|--------|
-| <img src="assets/robots/hello.svg" width="32"/> | 남규진 | ROS 2 개발 | [남규진](https://github.com/skarbwls419-art) |
-| <img src="assets/robots/love.svg" width="32"/> | 백세웅 | ROS 2 개발 | [백세웅](https://github.com/tpdnd16-jpg) |
-| <img src="assets/robots/excited.svg" width="32"/> | 최희범 | ROS 2 개발 | [최희범](https://github.com/kcodeusers) |
-| <img src="assets/robots/sleepy.svg" width="32"/> | 나연수 | ROS 2 개발 | [나연수](https://github.com/I-Am-Na) |
-| <img src="assets/robots/drained.svg" width="32"/> | 류병옥 | 웹 · 서버 · 가상 로봇 (FastAPI, React, MySQL) | [류병옥](https://github.com/devrereg) |
 
 ---
 
