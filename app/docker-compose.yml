@@ -1,0 +1,41 @@
+services:
+  mysql:
+    image: mysql:8.0
+    command: --default-time-zone=+00:00
+    environment:
+      MYSQL_DATABASE: printshop
+      MYSQL_USER: printshop
+      MYSQL_PASSWORD: printshop
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    environment:
+      DATABASE_URL: mysql+aiomysql://printshop:printshop@mysql:3306/printshop
+      BRIDGE_TOKEN: change-me-dev-token
+      CORS_ORIGINS: http://localhost:5173
+    ports:
+      - "8000:8000"
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  virtual-robot:
+    build: ./virtual-robot
+    environment:
+      BRIDGE_URL: ws://backend:8000/ws/bridge
+      BRIDGE_TOKEN: change-me-dev-token
+    depends_on:
+      - backend
+
+volumes:
+  mysql_data:

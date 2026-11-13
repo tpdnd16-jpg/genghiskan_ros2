@@ -1,0 +1,504 @@
+:root {
+  color-scheme: light dark;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f1115;
+  color: #e6e6e6;
+}
+
+.app-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 1.2rem;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: #1a1d24;
+  border-bottom: 1px solid #2a2e37;
+}
+
+.topbar h1 {
+  font-size: 1.1rem;
+  margin: 0;
+  margin-right: auto;
+}
+
+.status-group,
+.simulator-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.simulator-controls label {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.simulator-controls input[type="number"] {
+  width: 4rem;
+}
+
+.pill {
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  background: #2a2e37;
+}
+
+.pill.ok {
+  background: #1f3d2a;
+  color: #7ee2a1;
+}
+
+.pill.bad {
+  background: #3d1f1f;
+  color: #e27e7e;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.panel {
+  background: #1a1d24;
+  border: 1px solid #2a2e37;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 0.95rem;
+  color: #9aa0ab;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+.workshop-stage {
+  margin: 1rem;
+  margin-bottom: 0;
+}
+
+.wp-canvas {
+  width: 100%;
+  height: auto;
+  max-height: 440px;
+  display: block;
+}
+
+.wp-canvas text {
+  fill: #c7cbd4;
+  font-size: 11px;
+  font-family: inherit;
+}
+
+/* 프린터 */
+.wp-printer-body {
+  fill: #2a2e37;
+  stroke: #3a3f4a;
+}
+
+.wp-printer-printing .wp-printer-body {
+  fill: #1f3d2a;
+  stroke: #2f6f4a;
+}
+
+.wp-printer-done .wp-printer-body {
+  fill: #3a3220;
+  stroke: #6b5a2a;
+}
+
+.wp-printer-unloading .wp-printer-body {
+  fill: #1f2a4a;
+  stroke: #3a4f8a;
+}
+
+.wp-printer-order {
+  fill: #9aa0ab;
+}
+
+.wp-progress-track {
+  fill: #11141a;
+}
+
+.wp-progress-fill {
+  fill: #2f6fed;
+}
+
+.wp-blink {
+  animation: blink 1s infinite alternate;
+}
+
+/* 로봇팔 */
+.wp-arm-base {
+  fill: #22262f;
+  stroke: #3a3f4a;
+  stroke-width: 2;
+}
+
+.wp-arm-segment {
+  stroke: #9aa0ab;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.wp-arm-joint {
+  fill: #c7cbd4;
+}
+
+.wp-arm-gripper-palm {
+  fill: #c7cbd4;
+  stroke: #9aa0ab;
+  stroke-width: 1;
+}
+
+.wp-arm-gripper-finger {
+  fill: #2f6fed;
+  stroke: #1f4fb0;
+  stroke-width: 1;
+}
+
+/* 보드 (적재대/수령대/로봇팔 공용) */
+.wp-board {
+  fill: #c7a26a;
+  stroke: #8a6a3a;
+  transition: opacity 0.15s ease;
+}
+
+/* 적재대에서 맨 위(다음에 꺼내갈) 보드 */
+.wp-board-top {
+  stroke: #e2b85a;
+  stroke-width: 1.5;
+}
+
+/* 로봇팔이 실제로 그 보드를 집는 중일 때 */
+.wp-board-picking {
+  fill: #e2c27e;
+  animation: board-pick-pulse 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes board-pick-pulse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.55;
+  }
+}
+
+.wp-board-ready {
+  fill: #7ee2a1;
+  stroke: #3f9d67;
+}
+
+.wp-board-held {
+  fill: #7ec8e2;
+  stroke: #3f8ea1;
+}
+
+/* 보드 적재대 */
+.wp-stock-frame {
+  fill: #1a1d24;
+  stroke: #2a2e37;
+  stroke-width: 2;
+}
+
+.wp-stock-empty .wp-stock-frame {
+  stroke: #e27e7e;
+  stroke-width: 3;
+}
+
+.wp-stock-label {
+  fill: #9aa0ab;
+}
+
+/* 수령대 */
+.wp-pickup-frame {
+  fill: #1a1d24;
+  stroke: #2a2e37;
+  stroke-width: 2;
+}
+
+.wp-pickup-order {
+  fill: #9aa0ab;
+  font-size: 9px;
+}
+
+.wp-pickup-extra,
+.wp-customer-extra {
+  fill: #9aa0ab;
+  font-size: 10px;
+}
+
+.wp-pickup-label {
+  fill: #9aa0ab;
+}
+
+/* 손님 */
+.wp-customer circle {
+  fill: #e6c07b;
+}
+
+.wp-customer path {
+  fill: #5a7fd6;
+}
+
+.inventory-empty {
+  color: #e27e7e;
+  font-weight: 600;
+}
+
+.refill-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.refill-row input {
+  width: 4rem;
+}
+
+.queue ul,
+.log ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 220px;
+  overflow-y: auto;
+  font-size: 0.85rem;
+}
+
+.queue li,
+.log li {
+  padding: 0.25rem 0;
+  border-bottom: 1px solid #22262f;
+}
+
+.log-ts {
+  color: #6b7280;
+  margin-right: 0.4rem;
+}
+
+.button-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+button {
+  background: #2f6fed;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+button:hover {
+  background: #4a83f0;
+}
+
+.error {
+  color: #e27e7e;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: #1a1d24;
+  border: 1px solid #2a2e37;
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-width: 320px;
+  text-align: center;
+}
+
+.modal input {
+  display: block;
+  margin: 0.75rem auto;
+  width: 5rem;
+}
+
+.order-modal {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  text-align: left;
+  background: #ffffff;
+  color: #111827;
+  border: none;
+  border-radius: 14px;
+  padding: 1.75rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.order-modal h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.order-modal .modal-subtitle {
+  margin: 0 0 1.25rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.order-modal .modal-close {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 0;
+  cursor: pointer;
+}
+
+.order-modal .modal-close:hover {
+  background: none;
+  color: #4b5563;
+}
+
+.order-modal label,
+.order-modal .field-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.35rem;
+}
+
+.order-modal input[type="text"] {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 0 1.1rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 0.9rem;
+}
+
+.order-modal input[type="text"]::placeholder {
+  color: #9ca3af;
+}
+
+.order-modal input[type="text"]:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.order-modal-field {
+  margin-bottom: 1.4rem;
+}
+
+.chip-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #374151;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.chip:hover {
+  border-color: #9ca3af;
+}
+
+.chip.selected {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  color: #ffffff;
+}
+
+.order-modal .error {
+  margin: -0.6rem 0 1.1rem;
+  font-size: 0.85rem;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+.order-modal .modal-footer button {
+  padding: 0.55rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.order-modal .btn-outline {
+  background: #ffffff;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.order-modal .btn-outline:hover {
+  background: #f9fafb;
+}
+
+.order-modal .btn-primary {
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+}
+
+.order-modal .btn-primary:hover {
+  background: #4338ca;
+}

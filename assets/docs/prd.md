@@ -261,7 +261,7 @@ stateDiagram-v2
 | POST | /api/orders | {"shape": "STAR" 또는 null(랜덤)} | 201, 생성된 주문. 수동 주문 |
 | GET | /api/orders | ?status=&limit= | 주문 목록, 최신순 |
 | GET | /api/state | | 전체 스냅샷 (프린터, 재고, 로봇, 대기 주문, 수령대) |
-| POST | /api/inventory/refill | {"count": 10} | 재고를 count로 설정, refill_required=false, 디스패처 재개 |
+| POST | /api/inventory/refill | {"count": 10, "fill_physical": true} | 재고를 count로 설정, refill_required=false, 디스패처 재개. fill_physical=true(기본)면 가상 로봇 실물 수도 동기화 |
 | GET | /api/simulator | | 자동 주문 실행 여부, 간격, 시간 배율 |
 | PATCH | /api/simulator | {"running": true, "interval_sec": 45, "time_scale": 1.0} | 설정 변경 |
 | PATCH | /api/debug/faults | {"kind": "NO_BOARD", "once": true} 등 | 가상 로봇 장애 주입 (7.7) |
@@ -298,16 +298,17 @@ stateDiagram-v2
 | 방향 | type | data |
 | --- | --- | --- |
 | 로봇 → 서버 | bridge.hello | mode: SIM(이번 단계) / ROS2(다음 단계), robot_state, current_task_id |
-| 서버 → 로봇 | task.dispatch | task_id, type, slot, order_id |
+| 서버 → 로봇 | task.dispatch | task_id, type, slot, order_id, time_scale |
 | 로봇 → 서버 | task.accepted | task_id |
 | 로봇 → 서버 | task.rejected | task_id, reason: BUSY 등 |
 | 로봇 → 서버 | task.feedback | task_id, phase, progress |
 | 로봇 → 서버 | task.result | task_id, success, error_code, message |
-| 로봇 → 서버 | robot.state | state: IDLE/BUSY/ERROR/DISCONNECTED |
+| 로봇 → 서버 | robot.state | state: IDLE/BUSY/ERROR/DISCONNECTED, current_task_id, last_error |
 | 서버 → 로봇 | task.cancel | task_id (운영자 중단 시, P1) |
 | 서버 → 로봇 | robot.fault | kind, once (가상 로봇 전용) |
+| 서버 → 로봇 | robot.board_count | count (가상 로봇 전용. 보드 보충 시 `fill_physical=true`면 실물 수를 이 값으로 동기화) |
 
-hello의 current_task_id로 서버 재시작·재접속 후 진행 중 작업을 맞춘다.
+hello의 current_task_id로 서버 재시작·재접속 후 진행 중 작업을 맞춘다. task.dispatch의 time_scale은 디스패치 시점의 현재 배율(FR-20)이며, 가상 로봇은 7.7 단계 시간에 이 값을 곱해 실행한다(서버가 디스패치 때마다 현재 값을 실어 보내므로 로봇이 따로 /api/simulator를 조회할 필요가 없다). robot.state는 상태가 바뀔 때 즉시, 그리고 유휴 중에도 하트비트 목적으로 주기적으로(기본 5초) 보낸다 — 서버의 브릿지 하트비트 타임아웃(10초, 9.5)보다 짧아야 연결이 유지된다.
 
 ### 7.5 ROS 2 인터페이스 (다음 단계, 참고용)
 
@@ -354,6 +355,13 @@ string last_error
 | PLACE_AT_PICKUP | | O | 수령대에 놓기 |
 | RETURN_HOME | O | O | 가운데 홈 |
 
+표의 행 순서는 두 작업에 공통으로 쓰는 단계를 한 번씩만 모아 보여주는 카탈로그이며, 실제 실행 순서는 작업별로 다르다:
+
+- LOAD: MOVE_TO_STOCK → PICK_BOARD → CHECK_GRIP → MOVE_TO_PRINTER → PLACE_IN_PRINTER → RETURN_HOME (CHECK_GRIP 실패 시 → RETURN_HOME으로 바로 이동)
+- UNLOAD: MOVE_TO_PRINTER → PICK_FROM_PRINTER → CHECK_GRIP → MOVE_TO_PICKUP → PLACE_AT_PICKUP → RETURN_HOME (CHECK_GRIP 실패 시 → RETURN_HOME으로 바로 이동)
+
+두 작업 모두 그리퍼로 뭔가를 집은 직후에 CHECK_GRIP으로 파지를 확인하고, 실패하면 들고 있는 게 없는 채로 RETURN_HOME만 거쳐 결과를 보낸다.
+
 ### 7.7 가상 로봇 (이번 단계)
 
 가상 로봇은 /ws/bridge에 클라이언트로 접속하는 별도 Python 프로세스(docker compose 서비스 virtual-robot)다. task.dispatch를 받으면 아래 단계를 순서대로 진행하며 단계 시작마다 task.feedback을, 끝나면 task.result를 보낸다. 실행 중 새 task.dispatch가 오면 task.rejected(BUSY)를 보낸다.
@@ -377,7 +385,7 @@ string last_error
 
 장애 주입은 웹 디버그 패널 → PATCH /api/debug/faults → 서버가 가상 로봇에 robot.fault {kind, once} 전달 순으로 동작한다.
 
-- 실물 보드 수: 가상 로봇은 DB와 별개로 '실물 보드 수'를 갖고, LOAD 때 0이면 CHECK_GRIP에서 실패해 보드 없이 RETURN_HOME 후 Result(NO_BOARD)를 보낸다. 보충 알럿 확인 시 기본으로 입력 수량만큼 실물도 채우고, 디버그 패널의 '실물은 채우지 않음' 옵션으로 요구사항 12 상황을 만든다.
+- 실물 보드 수: 가상 로봇은 DB와 별개로 '실물 보드 수'를 갖고, LOAD 때 0이면 CHECK_GRIP에서 실패해 보드 없이 RETURN_HOME 후 Result(NO_BOARD)를 보낸다. POST /api/inventory/refill의 `fill_physical`(기본 true)이 true면 서버가 robot.board_count {count}를 보내 실물 수를 함께 맞추고, 디버그 패널에서 이 옵션을 false로 보내면(실물은 채우지 않음) 요구사항 12 상황(DB만 보충, 실물은 그대로 0)을 재현한다.
 - NO_BOARD 1회: 다음 LOAD 1회를 강제로 실패시킨다.
 - GRIP_FAIL 1회: 다음 UNLOAD 1회를 실패시킨다.
 - 연결 끊김: 가상 로봇 프로세스를 재시작해 확인한다.
@@ -493,14 +501,45 @@ robot.fault와 /api/debug/faults는 가상 로봇 전용이며 ROS 2 연동 후�
 
 | 구분 | 선택 | 단계 |
 | --- | --- | --- |
-| 프론트엔드 | React + TypeScript + Vite, SVG 기반 2D 애니메이션 | 이번 |
-| 서버 | FastAPI (Python 3.12), SQLAlchemy 2.x async + aiomysql, Alembic 마이그레이션, asyncio 기반 타이머·스케줄러 | 이번 |
+| 프론트엔드 | React + TypeScript + Vite, 아토믹 디자인 패턴, SVG 기반 2D 애니메이션 | 이번 |
+| 서버 | FastAPI (Python 3.12), 레이어드 아키텍처, SQLAlchemy 2.x async + aiomysql, Alembic 마이그레이션, asyncio 기반 타이머·스케줄러 | 이번 |
 | DB | MySQL 8.0, docker compose로 로컬 구동 (볼륨 마운트, 초기 시드: 프린터 3행, 재고 1행) | 이번 |
 | 가상 로봇 | Python 3.12 + websockets 클라이언트, 단계 시간 YAML 설정, docker compose 서비스 | 이번 |
 | ROS 2 브릿지 | rclpy + websockets 클라이언트 | 다음 |
 | 로봇 제어 | 두산 doosan-robot2 (DSR ROS 2), Ubuntu 24.04 + ROS 2 Jazzy (가정) | 다음 |
 
-### 10.4 역할 분담
+### 10.4 코드 아키텍처
+
+이번 단계 코드는 "레이어드 아키텍처(백엔드) + 아토믹 디자인(프론트엔드)" 원칙으로 작성한다. 목적은 같다: 책임을 계층·단위별로 나눠서 ROS 2 브릿지 교체(다음 단계)나 2D 애니메이션 고도화(M3) 같은 변경이 다른 계층을 건드리지 않게 하는 것이다.
+
+#### 10.4.1 백엔드: 레이어드 아키텍처
+
+`app/backend/app/` 는 아래 4개 계층으로 나뉘고, 의존 방향은 한쪽으로만 흐른다: **api → services → repositories → models/core**. 상위 계층은 하위 계층을 호출할 수 있지만 역방향 호출(예: repository가 service를 호출)은 두지 않는다.
+
+| 계층 | 디렉터리 | 책임 | 하지 않는 것 |
+| --- | --- | --- | --- |
+| API(전송) | `app/api/routers/*`, `app/api/ws/*` | HTTP 라우팅, 요청/응답 스키마 검증, WebSocket 연결 수명주기(인증·수신루프·하트비트) | 업무 규칙 판단, DB 쿼리 직접 작성 |
+| 서비스(업무) | `app/services/*` | 유스케이스 orchestration: 디스패처 우선순위(`DispatcherService`), 주문 생성(`OrderService`), 타이머 스윕(`TimerService`), 로봇 프로토콜 처리(`BridgeProtocolService`), 재고·시뮬레이터·통계 등. 여러 리포지토리를 넘나드는 트랜잭션 경계를 관리 | ORM 세션에 직접 `select()` 작성, HTTP/WS 프로토콜 세부사항 처리 |
+| 레포지토리(데이터) | `app/repositories/*` | 테이블별 조회·추가·잠금(`SELECT ... FOR UPDATE`) 전담. 엔티티별로 `OrderRepository`, `PrinterRepository`, `InventoryRepository`, `RobotTaskRepository`, `EventLogRepository`, `UserRepository` | 여러 테이블에 걸친 업무 판단, 상태 전이 규칙 |
+| 도메인/코어 | `app/models.py`(ORM), `app/schemas.py`(DTO), `app/enums.py`(상태값·상수), `app/core/*`(설정, DB 세션, 런타임 상태, 이벤트 발행, 시드) | 데이터 구조 정의, 횡단 관심사(config·DB 커넥션·이벤트 브로드캐스트) | 업무 로직 |
+
+규칙: ORM `session.execute(select(...))`는 레포지토리 안에서만 쓴다. 서비스는 레포지토리가 돌려준 엔티티의 속성을 바꾸고 트랜잭션(commit/rollback)을 직접 관리한다 (Unit of Work를 서비스가 쥐는 구조). 라우터·WS 핸들러는 서비스 메서드만 호출한다.
+
+#### 10.4.2 프론트엔드: 아토믹 디자인
+
+`app/frontend/src/components/` 는 아토믹 디자인 5단계로 나눈다. 작은 단위일수록 상태(state)를 갖지 않고 props만 받는다.
+
+| 단계 | 디렉터리 | 예시 | 특징 |
+| --- | --- | --- | --- |
+| atoms | `components/atoms/` | `Button`, `Pill`, `NumberField`, `Checkbox` | 가장 작은 UI 요소, 스타일·마크업만 책임 |
+| molecules | `components/molecules/` | `ConnectionStatus`, `SimulatorControls`, `ShapeButtonGroup`, `RefillControl`, `PrinterSlotRow`, `OrderListItem`, `LogEntryItem` | atom을 2~3개 묶은 작은 조합 단위 |
+| organisms | `components/organisms/` | `TopBar`, `PrinterPanel`, `InventoryPanel`, `OrderQueuePanel`, `OrderForm`, `DebugPanel`, `EventLogPanel`, `RefillModal` | 화면의 한 패널에 대응하는 독립적인 블록 |
+| templates | `components/templates/` | `DashboardTemplate` | 레이아웃 뼈대만 정의하고 각 영역은 `ReactNode` 슬롯(props)으로 받는다. 실제 데이터는 모른다 |
+| pages | `pages/` | `DashboardPage` | `useLiveState` 훅으로 서버 상태를 가져와 organisms를 채우고 template에 꽂는 조합 루트 |
+
+데이터 흐름은 `pages → (hooks/lib) → organisms → molecules → atoms` 한 방향이며, `App.tsx`는 `DashboardPage`만 렌더링하는 진입점으로 남긴다. `src/hooks/`(`useLiveState`)와 `src/lib/`(`api.ts`)는 아토믹 계층 바깥의 데이터 접근 유틸리티다.
+
+### 10.5 역할 분담
 
 | 영역 | 담당 | 산출물 | 단계 |
 | --- | --- | --- | --- |
@@ -510,15 +549,15 @@ robot.fault와 /api/debug/faults는 가상 로봇 전용이며 ROS 2 연동 후�
 | ROS 2 브릿지·작업 실행 노드 | ROS 2 담당자 | printshop_interfaces, bridge_node, 티칭 좌표, LOAD/UNLOAD 시퀀스, 그리퍼 파지 감지 | 다음 |
 | 하드웨어 배치 | ROS 2 담당자 | 적재대·프린터 거치대·수령대 물리 배치 | 다음 |
 
-### 10.5 가정
+### 10.6 가정
 
 - 보드 1장 = 주문 1건, 완성품은 보드째 수령대로 옮긴다.
-- 보드 초기 수량과 적재대 최대 수량은 10장이다.
+- 보드 초기 수량은 6장, 적재대 최대 수량은 3장이다.
 - 수령대는 수령 대기 보드를 모두 놓을 공간이 있다 (1~10초 내 수령되므로 동시 2장 이하 예상).
 - 빈 프린터가 여럿이면 아래층부터 채운다.
 - 대기 주문 수에 상한이 없다.
 
-### 10.6 미결 사항
+### 10.7 미결 사항
 
 - [ ] 7.7 단계 시간 기본값을 그대로 쓸지, ROS 2 담당자에게 예상 시간을 받아 맞출지
 - [ ] 웹 화면을 여러 대에서 동시에 볼지, 조작 권한을 나눌지
@@ -526,7 +565,7 @@ robot.fault와 /api/debug/faults는 가상 로봇 전용이며 ROS 2 연동 후�
 - [ ] (다음 단계) 로봇 모델·그리퍼 모델, ROS 2 배포판과 DSR 패키지 버전
 - [ ] (다음 단계) 실물 수령대 칸 수, 가득 찼을 때 UNLOAD를 멈출지 여부
 
-### 10.7 마일스톤
+### 10.8 마일스톤
 
 1. M1 서버 기반: 스키마·시드, 주문·재고 API, 디스패처, 타이머, 시뮬레이터.
 2. M2 가상 로봇: /ws/bridge 규약, 단계 시간 진행, 장애 주입, 재접속 복구.
