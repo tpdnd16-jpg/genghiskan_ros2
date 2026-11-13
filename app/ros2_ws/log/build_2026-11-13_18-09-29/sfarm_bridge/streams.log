@@ -1,0 +1,17 @@
+[1.519s] Invoking command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/sfarm_bridge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/sfarm_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/sfarm_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/sfarm_bridge/build --no-deps symlink_data
+[1.918s] running develop
+[2.178s] running egg_info
+[2.204s] writing sfarm_bridge.egg-info/PKG-INFO
+[2.204s] writing dependency_links to sfarm_bridge.egg-info/dependency_links.txt
+[2.204s] writing entry points to sfarm_bridge.egg-info/entry_points.txt
+[2.204s] writing requirements to sfarm_bridge.egg-info/requires.txt
+[2.204s] writing top-level names to sfarm_bridge.egg-info/top_level.txt
+[2.256s] reading manifest file 'sfarm_bridge.egg-info/SOURCES.txt'
+[2.257s] writing manifest file 'sfarm_bridge.egg-info/SOURCES.txt'
+[2.283s] running build_ext
+[2.283s] Creating /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/sfarm_bridge/lib/python3.12/site-packages/sfarm-bridge.egg-link (link to .)
+[2.284s] Installing sfarm_bridge script to /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/sfarm_bridge/lib/sfarm_bridge
+[2.284s] 
+[2.284s] Installed /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/sfarm_bridge
+[2.284s] running symlink_data
+[2.329s] Invoked command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/sfarm_bridge' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/sfarm_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/sfarm_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/sfarm_bridge/build --no-deps symlink_data

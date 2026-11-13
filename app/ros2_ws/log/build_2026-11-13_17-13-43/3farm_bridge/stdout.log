@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing 3farm_bridge.egg-info/PKG-INFO
+writing dependency_links to 3farm_bridge.egg-info/dependency_links.txt
+writing entry points to 3farm_bridge.egg-info/entry_points.txt
+writing requirements to 3farm_bridge.egg-info/requires.txt
+writing top-level names to 3farm_bridge.egg-info/top_level.txt
+reading manifest file '3farm_bridge.egg-info/SOURCES.txt'
+writing manifest file '3farm_bridge.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/lib/python3.12/site-packages/3farm-bridge.egg-link (link to .)
+Installing 3farm_bridge script to /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/lib/3farm_bridge
+
+Installed /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge
+running symlink_data

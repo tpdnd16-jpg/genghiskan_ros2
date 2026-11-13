@@ -1,0 +1,29 @@
+[0.276s] Invoking command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/sfarm_bridge': AMENT_PREFIX_PATH=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/sfarm_bridge:${AMENT_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTEST_ADDOPTS=--tb=short --junit-xml=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/sfarm_bridge/pytest.xml --junit-prefix=sfarm_bridge -o cache_dir=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/sfarm_bridge/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/sfarm_bridge:/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/sfarm_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -m pytest
+[0.698s] ============================= test session starts ==============================
+[0.698s] platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+[0.703s] cachedir: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/sfarm_bridge/.pytest_cache
+[0.703s] rootdir: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/sfarm_bridge
+[0.703s] plugins: ament-copyright-0.17.5, ament-flake8-0.17.5, ament-lint-0.17.5, ament-xmllint-0.17.5, ament-pep257-0.17.5, launch-testing-3.4.12, launch-testing-ros-0.26.13, colcon-core-0.21.3, cov-4.1.0, typeguard-4.1.5
+[1.130s] collecting ... 
+[1.130s] collected 6 items                                                              
+[1.130s] 
+[1.138s] test/test_copyright.py s                                                 [ 16%]
+[1.141s] test/test_event_format.py ...                                            [ 66%]
+[1.396s] test/test_flake8.py .                                                    [ 83%]
+[1.471s] test/test_pep257.py .                                                    [100%]
+[1.471s] 
+[1.471s] =============================== warnings summary ===============================
+[1.471s] test/test_flake8.py::test_flake8
+[1.471s] test/test_flake8.py::test_flake8
+[1.472s] test/test_flake8.py::test_flake8
+[1.472s] test/test_flake8.py::test_flake8
+[1.472s] test/test_flake8.py::test_flake8
+[1.472s] test/test_flake8.py::test_flake8
+[1.472s] test/test_flake8.py::test_flake8
+[1.472s] test/test_flake8.py::test_flake8
+[1.472s]   Warning: This process (pid=37857) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[1.472s] 
+[1.472s] -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+[1.473s] - generated xml file: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/sfarm_bridge/pytest.xml -
+[1.473s] =================== 5 passed, 1 skipped, 8 warnings in 0.77s ===================
+[1.685s] Invoked command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/sfarm_bridge' returned '0': AMENT_PREFIX_PATH=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/sfarm_bridge:${AMENT_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTEST_ADDOPTS=--tb=short --junit-xml=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/sfarm_bridge/pytest.xml --junit-prefix=sfarm_bridge -o cache_dir=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/sfarm_bridge/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/sfarm_bridge:/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/sfarm_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -m pytest

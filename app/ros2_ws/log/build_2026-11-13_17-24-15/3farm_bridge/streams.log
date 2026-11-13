@@ -1,0 +1,20 @@
+[1.523s] Invoking command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/build --no-deps symlink_data --force
+[1.927s] running develop
+[2.193s] running egg_info
+[2.221s] writing 3farm_bridge.egg-info/PKG-INFO
+[2.221s] writing dependency_links to 3farm_bridge.egg-info/dependency_links.txt
+[2.221s] writing entry points to 3farm_bridge.egg-info/entry_points.txt
+[2.221s] writing requirements to 3farm_bridge.egg-info/requires.txt
+[2.221s] writing top-level names to 3farm_bridge.egg-info/top_level.txt
+[2.271s] reading manifest file '3farm_bridge.egg-info/SOURCES.txt'
+[2.272s] writing manifest file '3farm_bridge.egg-info/SOURCES.txt'
+[2.298s] running build_ext
+[2.298s] Creating /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/lib/python3.12/site-packages/3farm-bridge.egg-link (link to .)
+[2.299s] Installing 3farm_bridge script to /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/lib/3farm_bridge
+[2.299s] 
+[2.299s] Installed /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge
+[2.299s] running symlink_data
+[2.300s] symbolically linking /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/resource/3farm_bridge -> /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/share/ament_index/resource_index/packages
+[2.300s] symbolically linking /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/package.xml -> /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/share/3farm_bridge
+[2.300s] error: [Errno 2] No such file or directory: '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/share/3farm_bridge/.env'
+[2.351s] Invoked command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/build --no-deps symlink_data --force

@@ -1,0 +1,22 @@
+[1.919s] Invoking command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/build --no-deps symlink_data
+[2.321s] running develop
+[2.607s] running egg_info
+[2.607s] creating 3farm_bridge.egg-info
+[2.642s] writing 3farm_bridge.egg-info/PKG-INFO
+[2.643s] writing dependency_links to 3farm_bridge.egg-info/dependency_links.txt
+[2.643s] writing requirements to 3farm_bridge.egg-info/requires.txt
+[2.643s] writing top-level names to 3farm_bridge.egg-info/top_level.txt
+[2.643s] writing manifest file '3farm_bridge.egg-info/SOURCES.txt'
+[2.699s] reading manifest file '3farm_bridge.egg-info/SOURCES.txt'
+[2.700s] writing manifest file '3farm_bridge.egg-info/SOURCES.txt'
+[2.730s] running build_ext
+[2.730s] Creating /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/lib/python3.12/site-packages/3farm-bridge.egg-link (link to .)
+[2.731s] 
+[2.731s] Installed /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge
+[2.731s] running symlink_data
+[2.732s] creating /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/share/ament_index
+[2.732s] creating /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/share/ament_index/resource_index
+[2.732s] creating /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/share/ament_index/resource_index/packages
+[2.732s] symbolically linking /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/resource/3farm_bridge -> /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/share/ament_index/resource_index/packages
+[2.732s] symbolically linking /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/package.xml -> /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/share/3farm_bridge
+[2.791s] Invoked command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/install/3farm_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/build/3farm_bridge/build --no-deps symlink_data
