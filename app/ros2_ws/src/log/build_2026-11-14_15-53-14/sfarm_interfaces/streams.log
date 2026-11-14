@@ -1,0 +1,275 @@
+[0.714s] Invoking command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/sfarm_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces
+[0.849s] -- The C compiler identification is GNU 13.3.0
+[0.981s] -- The CXX compiler identification is GNU 13.3.0
+[1.015s] -- Detecting C compiler ABI info
+[1.191s] -- Detecting C compiler ABI info - done
+[1.216s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.216s] -- Detecting C compile features
+[1.218s] -- Detecting C compile features - done
+[1.242s] -- Detecting CXX compiler ABI info
+[1.441s] -- Detecting CXX compiler ABI info - done
+[1.462s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.462s] -- Detecting CXX compile features
+[1.463s] -- Detecting CXX compile features - done
+[1.471s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.813s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.977s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.110s] -- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[2.128s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.268s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.451s] -- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[2.459s] -- Found action_msgs: 2.0.4 (/opt/ros/jazzy/share/action_msgs/cmake)
+[3.881s] -- Found ament_cmake_ros: 0.12.2 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[4.768s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.890s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.897s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[6.155s] -- Found PythonExtra: /usr/bin/python3  
+[7.025s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[7.161s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[7.171s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[7.252s] -- Added test 'copyright' to check source files copyright and LICENSE
+[7.255s] -- Added test 'lint_cmake' to check CMake code style
+[7.258s] -- Added test 'xmllint' to check XML markup files
+[7.267s] -- Configuring done (6.5s)
+[7.357s] -- Generating done (0.1s)
+[7.384s] -- Build files have been written to: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces
+[7.401s] Invoked command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/sfarm_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces
+[7.403s] Invoking command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces -- -j8 -l8
+[7.489s] [  3%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[7.490s] [  3%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[7.504s] [  3%] Built target ament_cmake_python_symlink_sfarm_interfaces
+[8.011s] running egg_info
+[8.013s] creating sfarm_interfaces.egg-info
+[8.065s] writing sfarm_interfaces.egg-info/PKG-INFO
+[8.065s] writing dependency_links to sfarm_interfaces.egg-info/dependency_links.txt
+[8.065s] writing top-level names to sfarm_interfaces.egg-info/top_level.txt
+[8.066s] writing manifest file 'sfarm_interfaces.egg-info/SOURCES.txt'
+[8.141s] [  3%] Built target sfarm_interfaces__rosidl_generator_type_description
+[8.159s] [  5%] [34m[1mGenerating C code for ROS interfaces[0m
+[8.177s] [  7%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[8.213s] reading manifest file 'sfarm_interfaces.egg-info/SOURCES.txt'
+[8.214s] writing manifest file 'sfarm_interfaces.egg-info/SOURCES.txt'
+[8.277s] [  7%] Built target ament_cmake_python_build_sfarm_interfaces_egg
+[8.284s] [  7%] Built target sfarm_interfaces__rs
+[9.790s] [  7%] Built target sfarm_interfaces__cpp
+[9.982s] [ 12%] [32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/action/detail/insert__description.c.o[0m
+[9.982s] [ 12%] [32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/action/detail/insert__functions.c.o[0m
+[9.982s] [ 12%] [32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/action/detail/insert__type_support.c.o[0m
+[9.982s] [ 16%] [32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/action/detail/eject__type_support.c.o[0m
+[9.982s] [ 14%] [32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/action/detail/eject__functions.c.o[0m
+[9.983s] [ 18%] [32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/action/detail/eject__description.c.o[0m
+[9.983s] [ 20%] [32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/srv/detail/error__description.c.o[0m
+[9.983s] [ 21%] [32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/srv/detail/error__functions.c.o[0m
+[10.096s] [ 23%] [32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/srv/detail/error__type_support.c.o[0m
+[10.373s] [ 25%] [32m[1mLinking C shared library libsfarm_interfaces__rosidl_generator_c.so[0m
+[10.447s] [ 25%] Built target sfarm_interfaces__rosidl_generator_c
+[10.477s] [ 29%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[10.478s] [ 29%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[10.479s] [ 30%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[10.480s] [ 32%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[10.482s] [ 36%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[10.483s] [ 36%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[11.691s] [ 38%] [32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/sfarm_interfaces/action/eject__type_support.cpp.o[0m
+[11.709s] [ 40%] [32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/sfarm_interfaces/action/insert__type_support.cpp.o[0m
+[11.712s] [ 41%] [32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/sfarm_interfaces/srv/error__type_support.cpp.o[0m
+[11.868s] [ 43%] [32m[1mLinking CXX shared library libsfarm_interfaces__rosidl_typesupport_c.so[0m
+[11.984s] [ 43%] Built target sfarm_interfaces__rosidl_typesupport_c
+[12.339s] [ 45%] [32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sfarm_interfaces/action/insert__type_support.cpp.o[0m
+[12.357s] [ 47%] [32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sfarm_interfaces/action/eject__type_support.cpp.o[0m
+[12.358s] [ 49%] [32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sfarm_interfaces/srv/error__type_support.cpp.o[0m
+[12.420s] [ 50%] [32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sfarm_interfaces/action/detail/eject__type_support.c.o[0m
+[12.423s] [ 52%] [32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sfarm_interfaces/action/detail/insert__type_support.c.o[0m
+[12.620s] [ 54%] [32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sfarm_interfaces/srv/detail/error__type_support.c.o[0m
+[12.651s] [ 58%] [32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sfarm_interfaces/action/detail/eject__type_support.cpp.o[0m
+[12.651s] [ 58%] [32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sfarm_interfaces/action/detail/insert__type_support.cpp.o[0m
+[12.816s] [ 60%] [32m[1mLinking C shared library libsfarm_interfaces__rosidl_typesupport_introspection_c.so[0m
+[12.909s] [ 60%] Built target sfarm_interfaces__rosidl_typesupport_introspection_c
+[12.932s] [ 61%] [32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sfarm_interfaces/srv/detail/error__type_support.cpp.o[0m
+[13.732s] [ 63%] [32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sfarm_interfaces/action/detail/dds_fastrtps/insert__type_support.cpp.o[0m
+[13.744s] [ 65%] [32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sfarm_interfaces/action/detail/dds_fastrtps/eject__type_support.cpp.o[0m
+[14.339s] [ 67%] [32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sfarm_interfaces/action/detail/insert__type_support_c.cpp.o[0m
+[14.419s] [ 69%] [32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sfarm_interfaces/srv/detail/dds_fastrtps/error__type_support.cpp.o[0m
+[14.538s] [ 70%] [32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sfarm_interfaces/action/detail/eject__type_support_c.cpp.o[0m
+[14.574s] [ 72%] [32m[1mLinking CXX shared library libsfarm_interfaces__rosidl_typesupport_cpp.so[0m
+[14.824s] [ 72%] Built target sfarm_interfaces__rosidl_typesupport_cpp
+[14.848s] [ 74%] [32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sfarm_interfaces/srv/detail/error__type_support_c.cpp.o[0m
+[15.178s] [ 76%] [32m[1mLinking CXX shared library libsfarm_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[15.446s] [ 76%] Built target sfarm_interfaces__rosidl_typesupport_introspection_cpp
+[16.368s] [ 78%] [32m[1mLinking CXX shared library libsfarm_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[16.515s] [ 78%] Built target sfarm_interfaces__rosidl_typesupport_fastrtps_c
+[16.798s] [ 80%] [32m[1mLinking CXX shared library libsfarm_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[16.974s] [ 80%] Built target sfarm_interfaces__rosidl_typesupport_fastrtps_cpp
+[17.008s] [ 80%] Built target sfarm_interfaces
+[17.043s] [ 81%] [34m[1mGenerating Python code for ROS interfaces[0m
+[20.020s] [ 81%] Built target sfarm_interfaces__py
+[20.054s] [ 87%] [32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/sfarm_interfaces/action/_eject_s.c.o[0m
+[20.054s] [ 87%] [32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/sfarm_interfaces/srv/_error_s.c.o[0m
+[20.055s] [ 87%] [32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/sfarm_interfaces/action/_insert_s.c.o[0m
+[20.457s] [ 89%] [32m[1mLinking C shared library libsfarm_interfaces__rosidl_generator_py.so[0m
+[20.538s] [ 89%] Built target sfarm_interfaces__rosidl_generator_py
+[20.572s] [ 94%] [32mBuilding C object CMakeFiles/sfarm_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/sfarm_interfaces/_sfarm_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[20.572s] [ 94%] [32mBuilding C object CMakeFiles/sfarm_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/sfarm_interfaces/_sfarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[20.573s] [ 94%] [32mBuilding C object CMakeFiles/sfarm_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/sfarm_interfaces/_sfarm_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[20.897s] [ 96%] [32m[1mLinking C shared module rosidl_generator_py/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_c.so[0m
+[20.900s] [100%] [32m[1mLinking C shared module rosidl_generator_py/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_fastrtps_c.so[0m
+[20.900s] [100%] [32m[1mLinking C shared module rosidl_generator_py/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_introspection_c.so[0m
+[20.953s] [100%] Built target sfarm_interfaces_s__rosidl_typesupport_c
+[20.957s] [100%] Built target sfarm_interfaces_s__rosidl_typesupport_introspection_c
+[20.957s] [100%] Built target sfarm_interfaces_s__rosidl_typesupport_fastrtps_c
+[20.977s] Invoked command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces -- -j8 -l8
+[20.995s] Invoking command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces
+[21.009s] -- Install configuration: ""
+[21.010s] -- Execute custom install script
+[21.011s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/ament_index/resource_index/rosidl_interfaces/sfarm_interfaces
+[21.029s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/action/Insert.json
+[21.050s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/action/Eject.json
+[21.071s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/srv/Error.json
+[21.095s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__functions.h
+[21.116s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__struct.h
+[21.136s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__type_support.h
+[21.157s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__functions.h
+[21.177s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__struct.h
+[21.199s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__type_support.h
+[21.220s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/eject.h
+[21.240s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/insert.h
+[21.256s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/msg/rosidl_generator_c__visibility_control.h
+[21.270s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__functions.h
+[21.286s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__struct.h
+[21.301s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__type_support.h
+[21.315s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/error.h
+[21.330s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/environment/library_path.sh
+[21.344s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/environment/library_path.dsv
+[21.359s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__rosidl_typesupport_fastrtps_c.h
+[21.374s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__rosidl_typesupport_fastrtps_c.h
+[21.390s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[21.411s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__rosidl_typesupport_fastrtps_c.h
+[21.432s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__rosidl_typesupport_introspection_c.h
+[21.453s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__rosidl_typesupport_introspection_c.h
+[21.474s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[21.498s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__rosidl_typesupport_introspection_c.h
+[21.521s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__builder.hpp
+[21.546s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__struct.hpp
+[21.568s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__traits.hpp
+[21.594s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__type_support.hpp
+[21.624s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__builder.hpp
+[21.652s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__struct.hpp
+[21.679s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__traits.hpp
+[21.708s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__type_support.hpp
+[21.733s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/eject.hpp
+[21.748s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/insert.hpp
+[21.763s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[21.778s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__builder.hpp
+[21.795s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__struct.hpp
+[21.810s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__traits.hpp
+[21.825s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__type_support.hpp
+[21.841s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/error.hpp
+[21.857s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__rosidl_typesupport_fastrtps_cpp.hpp
+[21.872s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__rosidl_typesupport_fastrtps_cpp.hpp
+[21.888s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[21.904s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__rosidl_typesupport_fastrtps_cpp.hpp
+[21.919s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__rosidl_typesupport_introspection_cpp.hpp
+[21.934s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__rosidl_typesupport_introspection_cpp.hpp
+[21.950s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__rosidl_typesupport_introspection_cpp.hpp
+[21.965s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/environment/pythonpath.sh
+[21.980s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/environment/pythonpath.dsv
+[21.998s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces-0.0.1-py3.12.egg-info/PKG-INFO
+[22.012s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces-0.0.1-py3.12.egg-info/SOURCES.txt
+[22.026s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces-0.0.1-py3.12.egg-info/dependency_links.txt
+[22.041s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces-0.0.1-py3.12.egg-info/top_level.txt
+[22.057s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/__init__.py
+[22.072s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/_sfarm_interfaces_s.ep.rosidl_typesupport_c.c
+[22.087s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/_sfarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[22.101s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/_sfarm_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[22.116s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action/__init__.py
+[22.132s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action/_eject.py
+[22.146s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action/_eject_s.c
+[22.162s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action/_insert.py
+[22.178s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action/_insert_s.c
+[22.197s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_c.so
+[22.213s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[22.229s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_introspection_c.so
+[22.246s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/srv/__init__.py
+[22.261s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/srv/_error.py
+[22.277s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/srv/_error_s.c
+[22.293s] -- Up-to-date symlink: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[22.294s] -- Up-to-date symlink: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_introspection_c.so
+[22.294s] -- Up-to-date symlink: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_c.so
+[22.295s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/rust/Cargo.toml
+[22.311s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/rust/build.rs
+[22.325s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/rust/src/action.rs
+[22.340s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/rust/src/action/rmw.rs
+[22.354s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/rust/src/lib.rs
+[22.368s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/rust/src/srv.rs
+[22.382s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/rust/src/srv/rmw.rs
+[22.399s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/action/Insert.idl
+[22.413s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/action/Eject.idl
+[22.427s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/srv/Error.idl
+[22.442s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/action/Insert.action
+[22.457s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/action/Eject.action
+[22.471s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/srv/Error.srv
+[22.486s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/ament_index/resource_index/package_run_dependencies/sfarm_interfaces
+[22.502s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/ament_index/resource_index/parent_prefix_path/sfarm_interfaces
+[22.516s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/environment/ament_prefix_path.sh
+[22.530s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/environment/ament_prefix_path.dsv
+[22.545s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/environment/path.sh
+[22.560s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/environment/path.dsv
+[22.574s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/local_setup.bash
+[22.589s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/local_setup.sh
+[22.608s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/local_setup.zsh
+[22.625s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/local_setup.dsv
+[22.642s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/package.dsv
+[22.659s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/ament_index/resource_index/packages/sfarm_interfaces
+[22.676s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/rosidl_cmake-extras.cmake
+[22.701s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[22.723s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[22.744s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[22.765s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[22.784s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[22.805s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[22.825s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[22.841s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfacesConfig.cmake
+[22.858s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfacesConfig-version.cmake
+[22.875s] -- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/package.xml
+[22.891s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_generator_c.so
+[22.892s] -- Set non-toolchain portion of runtime path of "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_generator_c.so" to ""
+[22.892s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_fastrtps_c.so
+[22.893s] -- Set non-toolchain portion of runtime path of "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[22.893s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_introspection_c.so
+[22.894s] -- Set non-toolchain portion of runtime path of "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[22.894s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_c.so
+[22.895s] -- Set non-toolchain portion of runtime path of "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_c.so" to ""
+[22.896s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[22.897s] -- Set non-toolchain portion of runtime path of "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[22.898s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_introspection_cpp.so
+[22.899s] -- Set non-toolchain portion of runtime path of "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[22.899s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_cpp.so
+[22.901s] -- Set non-toolchain portion of runtime path of "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_cpp.so" to ""
+[23.025s] Listing '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces'...
+[23.025s] Compiling '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/__init__.py'...
+[23.025s] Listing '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action'...
+[23.026s] Compiling '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action/__init__.py'...
+[23.026s] Compiling '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action/_eject.py'...
+[23.026s] Compiling '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action/_insert.py'...
+[23.026s] Listing '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/srv'...
+[23.026s] Compiling '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/srv/__init__.py'...
+[23.026s] Compiling '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/srv/_error.py'...
+[23.038s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_generator_py.so
+[23.039s] -- Set non-toolchain portion of runtime path of "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_generator_py.so" to ""
+[23.039s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_generator_cExport.cmake
+[23.039s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_generator_cExport-noconfig.cmake
+[23.040s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[23.040s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[23.040s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[23.040s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[23.040s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfaces__rosidl_typesupport_cExport.cmake
+[23.041s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[23.041s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_generator_cppExport.cmake
+[23.041s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[23.042s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[23.042s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[23.042s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[23.042s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfaces__rosidl_typesupport_cppExport.cmake
+[23.042s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[23.042s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_generator_pyExport.cmake
+[23.043s] -- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[23.046s] Invoked command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces

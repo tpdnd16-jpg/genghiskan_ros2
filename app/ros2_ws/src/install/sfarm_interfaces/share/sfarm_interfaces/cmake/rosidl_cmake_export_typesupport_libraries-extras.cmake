@@ -1,0 +1,1 @@
+/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake

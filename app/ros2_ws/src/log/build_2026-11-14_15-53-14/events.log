@@ -1,0 +1,539 @@
+[0.000000] (-) TimerEvent: {}
+[0.001283] (sfarm_bridge) JobQueued: {'identifier': 'sfarm_bridge', 'dependencies': OrderedDict()}
+[0.001705] (sfarm_interfaces) JobQueued: {'identifier': 'sfarm_interfaces', 'dependencies': OrderedDict()}
+[0.001772] (sfarm_bridge) JobStarted: {'identifier': 'sfarm_bridge'}
+[0.023653] (sfarm_interfaces) JobStarted: {'identifier': 'sfarm_interfaces'}
+[0.100364] (-) TimerEvent: {}
+[0.200987] (-) TimerEvent: {}
+[0.301367] (-) TimerEvent: {}
+[0.401722] (-) TimerEvent: {}
+[0.502052] (-) TimerEvent: {}
+[0.602378] (-) TimerEvent: {}
+[0.703180] (-) TimerEvent: {}
+[0.732382] (sfarm_interfaces) JobProgress: {'identifier': 'sfarm_interfaces', 'progress': 'cmake'}
+[0.733704] (sfarm_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/sfarm_interfaces', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces'], 'cwd': '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces', 'env': OrderedDict({'GZ_SIM_SYSTEM_PLUGIN_PATH': '/opt/ros/jazzy/lib', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'EGL_PLATFORM': 'wayland', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'rokey', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/rokey', 'CHROME_DESKTOP': 'com.microsoft.VSCode.desktop', 'OLDPWD': '/home/rokey/workspace/genghiskan_ros2', 'TERM_PROGRAM_VERSION': '1.145.2', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/com.microsoft.VSCode.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'MANAGERPID': '2282', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '2544', 'BUNDLED_DEBUGPY_PATH': '/home/rokey/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '4101', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rokey', 'JOURNAL_STREAM': '10:15113', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'rokey', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'PATH': '/home/rokey/.local/bin:/home/rokey/.opencode/bin:/home/rokey/.local/bin:/home/rokey/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/rokey/.local/bin:/home/rokey/.opencode/bin:/home/rokey/.local/bin:/home/rokey/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/rokey/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts:/home/rokey/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/usr/share/code/bin/copilot-shim', 'SESSION_MANAGER': 'local/rokey-550XBE-350XBE:@/tmp/.ICE-unix/2507,unix/rokey-550XBE-350XBE:/tmp/.ICE-unix/2507', 'INVOCATION_ID': '0dbfff34e981472f9520f199afeb1ee6', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/rokey/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-2d7444549ebe6dce.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'PYTHONSTARTUP': '/home/rokey/.config/Code/User/workspaceStorage/310425ca367654b1f1a0be166348dc40/ms-python.python/pythonrc.py', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.RKUPY3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-77a9f97213.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '20', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'COPILOT_DEBUG_NONCE': '22247ed3f7b2bb09532fea0637f7f112', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages:/home/rokey/ws_cobot_pjt/ws_dsr/install/dsr_common2/lib/dsr_common2/imp:/home/rokey/ws_cobot_pjt/ws_dsr/install/dsr_common2/lib/dsr_common2/imp', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.805753] (-) TimerEvent: {}
+[0.873358] (sfarm_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.906141] (-) TimerEvent: {}
+[1.005369] (sfarm_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[1.006247] (-) TimerEvent: {}
+[1.039103] (sfarm_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.106380] (-) TimerEvent: {}
+[1.206738] (-) TimerEvent: {}
+[1.215820] (sfarm_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.240334] (sfarm_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.241020] (sfarm_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.242483] (sfarm_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.266833] (sfarm_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.306924] (-) TimerEvent: {}
+[1.407338] (-) TimerEvent: {}
+[1.466113] (sfarm_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.486524] (sfarm_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.487069] (sfarm_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.488078] (sfarm_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.495176] (sfarm_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[1.507429] (-) TimerEvent: {}
+[1.607741] (-) TimerEvent: {}
+[1.708088] (-) TimerEvent: {}
+[1.808527] (-) TimerEvent: {}
+[1.837226] (sfarm_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.908671] (-) TimerEvent: {}
+[2.002016] (sfarm_interfaces) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[2.008811] (-) TimerEvent: {}
+[2.109174] (-) TimerEvent: {}
+[2.134432] (sfarm_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[2.152271] (sfarm_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.209262] (-) TimerEvent: {}
+[2.292686] (sfarm_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.309377] (-) TimerEvent: {}
+[2.411271] (-) TimerEvent: {}
+[2.475298] (sfarm_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[2.483943] (sfarm_interfaces) StdoutLine: {'line': b'-- Found action_msgs: 2.0.4 (/opt/ros/jazzy/share/action_msgs/cmake)\n'}
+[2.512666] (-) TimerEvent: {}
+[2.613095] (-) TimerEvent: {}
+[2.713503] (-) TimerEvent: {}
+[2.813866] (-) TimerEvent: {}
+[2.914260] (-) TimerEvent: {}
+[3.014646] (-) TimerEvent: {}
+[3.114984] (-) TimerEvent: {}
+[3.215316] (-) TimerEvent: {}
+[3.298488] (sfarm_bridge) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_bridge/build', '--no-deps', 'symlink_data'], 'cwd': '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_bridge', 'env': OrderedDict({'GZ_SIM_SYSTEM_PLUGIN_PATH': '/opt/ros/jazzy/lib', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'EGL_PLATFORM': 'wayland', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'rokey', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/rokey', 'CHROME_DESKTOP': 'com.microsoft.VSCode.desktop', 'OLDPWD': '/home/rokey/workspace/genghiskan_ros2', 'TERM_PROGRAM_VERSION': '1.145.2', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/com.microsoft.VSCode.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'MANAGERPID': '2282', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '2544', 'BUNDLED_DEBUGPY_PATH': '/home/rokey/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '4101', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rokey', 'JOURNAL_STREAM': '10:15113', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'rokey', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'PATH': '/home/rokey/.local/bin:/home/rokey/.opencode/bin:/home/rokey/.local/bin:/home/rokey/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/rokey/.local/bin:/home/rokey/.opencode/bin:/home/rokey/.local/bin:/home/rokey/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/rokey/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts:/home/rokey/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/usr/share/code/bin/copilot-shim', 'SESSION_MANAGER': 'local/rokey-550XBE-350XBE:@/tmp/.ICE-unix/2507,unix/rokey-550XBE-350XBE:/tmp/.ICE-unix/2507', 'INVOCATION_ID': '0dbfff34e981472f9520f199afeb1ee6', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/rokey/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-2d7444549ebe6dce.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'PYTHONSTARTUP': '/home/rokey/.config/Code/User/workspaceStorage/310425ca367654b1f1a0be166348dc40/ms-python.python/pythonrc.py', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.RKUPY3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-77a9f97213.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '20', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_bridge', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'COPILOT_DEBUG_NONCE': '22247ed3f7b2bb09532fea0637f7f112', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages:/home/rokey/ws_cobot_pjt/ws_dsr/install/dsr_common2/lib/dsr_common2/imp:/home/rokey/ws_cobot_pjt/ws_dsr/install/dsr_common2/lib/dsr_common2/imp', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}), 'shell': False}
+[3.315424] (-) TimerEvent: {}
+[3.415781] (-) TimerEvent: {}
+[3.516121] (-) TimerEvent: {}
+[3.616439] (-) TimerEvent: {}
+[3.716791] (-) TimerEvent: {}
+[3.817153] (-) TimerEvent: {}
+[3.905725] (sfarm_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.2 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[3.917256] (-) TimerEvent: {}
+[4.017592] (-) TimerEvent: {}
+[4.064376] (sfarm_bridge) StdoutLine: {'line': b'running develop\n'}
+[4.117715] (-) TimerEvent: {}
+[4.218133] (-) TimerEvent: {}
+[4.318535] (-) TimerEvent: {}
+[4.418958] (-) TimerEvent: {}
+[4.519301] (-) TimerEvent: {}
+[4.560096] (sfarm_bridge) StdoutLine: {'line': b'running egg_info\n'}
+[4.560405] (sfarm_bridge) StdoutLine: {'line': b'creating sfarm_bridge.egg-info\n'}
+[4.608643] (sfarm_bridge) StdoutLine: {'line': b'writing sfarm_bridge.egg-info/PKG-INFO\n'}
+[4.609218] (sfarm_bridge) StdoutLine: {'line': b'writing dependency_links to sfarm_bridge.egg-info/dependency_links.txt\n'}
+[4.609582] (sfarm_bridge) StdoutLine: {'line': b'writing entry points to sfarm_bridge.egg-info/entry_points.txt\n'}
+[4.609930] (sfarm_bridge) StdoutLine: {'line': b'writing requirements to sfarm_bridge.egg-info/requires.txt\n'}
+[4.610280] (sfarm_bridge) StdoutLine: {'line': b'writing top-level names to sfarm_bridge.egg-info/top_level.txt\n'}
+[4.610627] (sfarm_bridge) StdoutLine: {'line': b"writing manifest file 'sfarm_bridge.egg-info/SOURCES.txt'\n"}
+[4.619404] (-) TimerEvent: {}
+[4.713674] (sfarm_bridge) StdoutLine: {'line': b"reading manifest file 'sfarm_bridge.egg-info/SOURCES.txt'\n"}
+[4.714884] (sfarm_bridge) StdoutLine: {'line': b"writing manifest file 'sfarm_bridge.egg-info/SOURCES.txt'\n"}
+[4.719794] (-) TimerEvent: {}
+[4.792387] (sfarm_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[4.795468] (sfarm_bridge) StdoutLine: {'line': b'running build_ext\n'}
+[4.795806] (sfarm_bridge) StdoutLine: {'line': b'Creating /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/lib/python3.12/site-packages/sfarm-bridge.egg-link (link to .)\n'}
+[4.797328] (sfarm_bridge) StdoutLine: {'line': b'Installing sfarm_bridge script to /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/lib/sfarm_bridge\n'}
+[4.797931] (sfarm_bridge) StdoutLine: {'line': b'\n'}
+[4.798217] (sfarm_bridge) StdoutLine: {'line': b'Installed /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_bridge\n'}
+[4.798534] (sfarm_bridge) StdoutLine: {'line': b'running symlink_data\n'}
+[4.798719] (sfarm_bridge) StdoutLine: {'line': b'creating /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/share/ament_index\n'}
+[4.798865] (sfarm_bridge) StdoutLine: {'line': b'creating /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/share/ament_index/resource_index\n'}
+[4.799023] (sfarm_bridge) StdoutLine: {'line': b'creating /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/share/ament_index/resource_index/packages\n'}
+[4.799299] (sfarm_bridge) StdoutLine: {'line': b'symbolically linking /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_bridge/resource/sfarm_bridge -> /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/share/ament_index/resource_index/packages\n'}
+[4.799510] (sfarm_bridge) StdoutLine: {'line': b'symbolically linking /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_bridge/package.xml -> /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/share/sfarm_bridge\n'}
+[4.819940] (-) TimerEvent: {}
+[4.865211] (sfarm_bridge) CommandEnded: {'returncode': 0}
+[4.884169] (sfarm_bridge) JobEnded: {'identifier': 'sfarm_bridge', 'rc': 0}
+[4.920099] (-) TimerEvent: {}
+[5.020528] (-) TimerEvent: {}
+[5.120861] (-) TimerEvent: {}
+[5.221209] (-) TimerEvent: {}
+[5.321578] (-) TimerEvent: {}
+[5.421918] (-) TimerEvent: {}
+[5.522275] (-) TimerEvent: {}
+[5.622628] (-) TimerEvent: {}
+[5.722975] (-) TimerEvent: {}
+[5.823379] (-) TimerEvent: {}
+[5.914232] (sfarm_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.921716] (sfarm_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[5.923496] (-) TimerEvent: {}
+[6.023797] (-) TimerEvent: {}
+[6.124159] (-) TimerEvent: {}
+[6.179167] (sfarm_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[6.224323] (-) TimerEvent: {}
+[6.324659] (-) TimerEvent: {}
+[6.425035] (-) TimerEvent: {}
+[6.525388] (-) TimerEvent: {}
+[6.625753] (-) TimerEvent: {}
+[6.726084] (-) TimerEvent: {}
+[6.826412] (-) TimerEvent: {}
+[6.926808] (-) TimerEvent: {}
+[7.027142] (-) TimerEvent: {}
+[7.049898] (sfarm_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[7.127306] (-) TimerEvent: {}
+[7.185219] (sfarm_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[7.195710] (sfarm_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[7.227427] (-) TimerEvent: {}
+[7.276302] (sfarm_interfaces) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[7.279912] (sfarm_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[7.282332] (sfarm_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[7.292016] (sfarm_interfaces) StdoutLine: {'line': b'-- Configuring done (6.5s)\n'}
+[7.327562] (-) TimerEvent: {}
+[7.381891] (sfarm_interfaces) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[7.408378] (sfarm_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces\n'}
+[7.425380] (sfarm_interfaces) CommandEnded: {'returncode': 0}
+[7.426333] (sfarm_interfaces) JobProgress: {'identifier': 'sfarm_interfaces', 'progress': 'build'}
+[7.427748] (sfarm_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces', '--', '-j8', '-l8'], 'cwd': '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces', 'env': OrderedDict({'GZ_SIM_SYSTEM_PLUGIN_PATH': '/opt/ros/jazzy/lib', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'EGL_PLATFORM': 'wayland', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'rokey', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/rokey', 'CHROME_DESKTOP': 'com.microsoft.VSCode.desktop', 'OLDPWD': '/home/rokey/workspace/genghiskan_ros2', 'TERM_PROGRAM_VERSION': '1.145.2', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/com.microsoft.VSCode.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'MANAGERPID': '2282', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '2544', 'BUNDLED_DEBUGPY_PATH': '/home/rokey/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '4101', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rokey', 'JOURNAL_STREAM': '10:15113', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'rokey', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'PATH': '/home/rokey/.local/bin:/home/rokey/.opencode/bin:/home/rokey/.local/bin:/home/rokey/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/rokey/.local/bin:/home/rokey/.opencode/bin:/home/rokey/.local/bin:/home/rokey/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/rokey/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts:/home/rokey/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/usr/share/code/bin/copilot-shim', 'SESSION_MANAGER': 'local/rokey-550XBE-350XBE:@/tmp/.ICE-unix/2507,unix/rokey-550XBE-350XBE:/tmp/.ICE-unix/2507', 'INVOCATION_ID': '0dbfff34e981472f9520f199afeb1ee6', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/rokey/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-2d7444549ebe6dce.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'PYTHONSTARTUP': '/home/rokey/.config/Code/User/workspaceStorage/310425ca367654b1f1a0be166348dc40/ms-python.python/pythonrc.py', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.RKUPY3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-77a9f97213.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '20', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'COPILOT_DEBUG_NONCE': '22247ed3f7b2bb09532fea0637f7f112', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages:/home/rokey/ws_cobot_pjt/ws_dsr/install/dsr_common2/lib/dsr_common2/imp:/home/rokey/ws_cobot_pjt/ws_dsr/install/dsr_common2/lib/dsr_common2/imp', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[7.428755] (-) TimerEvent: {}
+[7.513815] (sfarm_interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating Rust code for ROS interfaces\x1b[0m\n'}
+[7.514316] (sfarm_interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[7.528164] (sfarm_interfaces) StdoutLine: {'line': b'[  3%] Built target ament_cmake_python_symlink_sfarm_interfaces\n'}
+[7.528852] (-) TimerEvent: {}
+[7.629174] (-) TimerEvent: {}
+[7.729558] (-) TimerEvent: {}
+[7.829954] (-) TimerEvent: {}
+[7.930364] (-) TimerEvent: {}
+[8.030742] (-) TimerEvent: {}
+[8.035351] (sfarm_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[8.037861] (sfarm_interfaces) StdoutLine: {'line': b'creating sfarm_interfaces.egg-info\n'}
+[8.089191] (sfarm_interfaces) StdoutLine: {'line': b'writing sfarm_interfaces.egg-info/PKG-INFO\n'}
+[8.089651] (sfarm_interfaces) StdoutLine: {'line': b'writing dependency_links to sfarm_interfaces.egg-info/dependency_links.txt\n'}
+[8.089994] (sfarm_interfaces) StdoutLine: {'line': b'writing top-level names to sfarm_interfaces.egg-info/top_level.txt\n'}
+[8.090337] (sfarm_interfaces) StdoutLine: {'line': b"writing manifest file 'sfarm_interfaces.egg-info/SOURCES.txt'\n"}
+[8.130867] (-) TimerEvent: {}
+[8.165621] (sfarm_interfaces) StdoutLine: {'line': b'[  3%] Built target sfarm_interfaces__rosidl_generator_type_description\n'}
+[8.183052] (sfarm_interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[8.201649] (sfarm_interfaces) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[8.230991] (-) TimerEvent: {}
+[8.237721] (sfarm_interfaces) StdoutLine: {'line': b"reading manifest file 'sfarm_interfaces.egg-info/SOURCES.txt'\n"}
+[8.238877] (sfarm_interfaces) StdoutLine: {'line': b"writing manifest file 'sfarm_interfaces.egg-info/SOURCES.txt'\n"}
+[8.301947] (sfarm_interfaces) StdoutLine: {'line': b'[  7%] Built target ament_cmake_python_build_sfarm_interfaces_egg\n'}
+[8.308453] (sfarm_interfaces) StdoutLine: {'line': b'[  7%] Built target sfarm_interfaces__rs\n'}
+[8.331129] (-) TimerEvent: {}
+[8.431421] (-) TimerEvent: {}
+[8.531764] (-) TimerEvent: {}
+[8.632150] (-) TimerEvent: {}
+[8.732438] (-) TimerEvent: {}
+[8.832799] (-) TimerEvent: {}
+[8.933130] (-) TimerEvent: {}
+[9.033419] (-) TimerEvent: {}
+[9.133770] (-) TimerEvent: {}
+[9.234090] (-) TimerEvent: {}
+[9.334406] (-) TimerEvent: {}
+[9.434703] (-) TimerEvent: {}
+[9.535071] (-) TimerEvent: {}
+[9.635354] (-) TimerEvent: {}
+[9.735675] (-) TimerEvent: {}
+[9.814449] (sfarm_interfaces) StdoutLine: {'line': b'[  7%] Built target sfarm_interfaces__cpp\n'}
+[9.835809] (-) TimerEvent: {}
+[9.936303] (-) TimerEvent: {}
+[10.006384] (sfarm_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/action/detail/insert__description.c.o\x1b[0m\n'}
+[10.006685] (sfarm_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/action/detail/insert__functions.c.o\x1b[0m\n'}
+[10.006838] (sfarm_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/action/detail/insert__type_support.c.o\x1b[0m\n'}
+[10.006975] (sfarm_interfaces) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/action/detail/eject__type_support.c.o\x1b[0m\n'}
+[10.007108] (sfarm_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/action/detail/eject__functions.c.o\x1b[0m\n'}
+[10.007355] (sfarm_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/action/detail/eject__description.c.o\x1b[0m\n'}
+[10.007540] (sfarm_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/srv/detail/error__description.c.o\x1b[0m\n'}
+[10.007672] (sfarm_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/srv/detail/error__functions.c.o\x1b[0m\n'}
+[10.037288] (-) TimerEvent: {}
+[10.120802] (sfarm_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sfarm_interfaces/srv/detail/error__type_support.c.o\x1b[0m\n'}
+[10.140679] (-) TimerEvent: {}
+[10.241079] (-) TimerEvent: {}
+[10.341406] (-) TimerEvent: {}
+[10.397601] (sfarm_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking C shared library libsfarm_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[10.441583] (-) TimerEvent: {}
+[10.471620] (sfarm_interfaces) StdoutLine: {'line': b'[ 25%] Built target sfarm_interfaces__rosidl_generator_c\n'}
+[10.501610] (sfarm_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[10.502149] (sfarm_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[10.503454] (sfarm_interfaces) StdoutLine: {'line': b'[ 30%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[10.504186] (sfarm_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[10.506661] (sfarm_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[10.507160] (sfarm_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[10.541703] (-) TimerEvent: {}
+[10.644434] (-) TimerEvent: {}
+[10.744852] (-) TimerEvent: {}
+[10.845269] (-) TimerEvent: {}
+[10.945907] (-) TimerEvent: {}
+[11.046265] (-) TimerEvent: {}
+[11.146635] (-) TimerEvent: {}
+[11.247024] (-) TimerEvent: {}
+[11.347392] (-) TimerEvent: {}
+[11.447786] (-) TimerEvent: {}
+[11.548138] (-) TimerEvent: {}
+[11.648549] (-) TimerEvent: {}
+[11.715332] (sfarm_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/sfarm_interfaces/action/eject__type_support.cpp.o\x1b[0m\n'}
+[11.733349] (sfarm_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/sfarm_interfaces/action/insert__type_support.cpp.o\x1b[0m\n'}
+[11.736355] (sfarm_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/sfarm_interfaces/srv/error__type_support.cpp.o\x1b[0m\n'}
+[11.748658] (-) TimerEvent: {}
+[11.850264] (-) TimerEvent: {}
+[11.892277] (sfarm_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32m\x1b[1mLinking CXX shared library libsfarm_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[11.950684] (-) TimerEvent: {}
+[12.008701] (sfarm_interfaces) StdoutLine: {'line': b'[ 43%] Built target sfarm_interfaces__rosidl_typesupport_c\n'}
+[12.050801] (-) TimerEvent: {}
+[12.151157] (-) TimerEvent: {}
+[12.251602] (-) TimerEvent: {}
+[12.353264] (-) TimerEvent: {}
+[12.363840] (sfarm_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sfarm_interfaces/action/insert__type_support.cpp.o\x1b[0m\n'}
+[12.381555] (sfarm_interfaces) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sfarm_interfaces/action/eject__type_support.cpp.o\x1b[0m\n'}
+[12.383039] (sfarm_interfaces) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sfarm_interfaces/srv/error__type_support.cpp.o\x1b[0m\n'}
+[12.444583] (sfarm_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sfarm_interfaces/action/detail/eject__type_support.c.o\x1b[0m\n'}
+[12.447228] (sfarm_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sfarm_interfaces/action/detail/insert__type_support.c.o\x1b[0m\n'}
+[12.456969] (-) TimerEvent: {}
+[12.557386] (-) TimerEvent: {}
+[12.644097] (sfarm_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sfarm_interfaces/srv/detail/error__type_support.c.o\x1b[0m\n'}
+[12.658264] (-) TimerEvent: {}
+[12.675645] (sfarm_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sfarm_interfaces/action/detail/eject__type_support.cpp.o\x1b[0m\n'}
+[12.675982] (sfarm_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sfarm_interfaces/action/detail/insert__type_support.cpp.o\x1b[0m\n'}
+[12.758381] (-) TimerEvent: {}
+[12.840593] (sfarm_interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking C shared library libsfarm_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[12.858500] (-) TimerEvent: {}
+[12.933690] (sfarm_interfaces) StdoutLine: {'line': b'[ 60%] Built target sfarm_interfaces__rosidl_typesupport_introspection_c\n'}
+[12.956941] (sfarm_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sfarm_interfaces/srv/detail/error__type_support.cpp.o\x1b[0m\n'}
+[12.959254] (-) TimerEvent: {}
+[13.059633] (-) TimerEvent: {}
+[13.160040] (-) TimerEvent: {}
+[13.260463] (-) TimerEvent: {}
+[13.362390] (-) TimerEvent: {}
+[13.462805] (-) TimerEvent: {}
+[13.563439] (-) TimerEvent: {}
+[13.666280] (-) TimerEvent: {}
+[13.756417] (sfarm_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sfarm_interfaces/action/detail/dds_fastrtps/insert__type_support.cpp.o\x1b[0m\n'}
+[13.766399] (-) TimerEvent: {}
+[13.768781] (sfarm_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sfarm_interfaces/action/detail/dds_fastrtps/eject__type_support.cpp.o\x1b[0m\n'}
+[13.866515] (-) TimerEvent: {}
+[13.967685] (-) TimerEvent: {}
+[14.068269] (-) TimerEvent: {}
+[14.169292] (-) TimerEvent: {}
+[14.269729] (-) TimerEvent: {}
+[14.363482] (sfarm_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sfarm_interfaces/action/detail/insert__type_support_c.cpp.o\x1b[0m\n'}
+[14.369862] (-) TimerEvent: {}
+[14.443259] (sfarm_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sfarm_interfaces/srv/detail/dds_fastrtps/error__type_support.cpp.o\x1b[0m\n'}
+[14.469993] (-) TimerEvent: {}
+[14.562302] (sfarm_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sfarm_interfaces/action/detail/eject__type_support_c.cpp.o\x1b[0m\n'}
+[14.570123] (-) TimerEvent: {}
+[14.598206] (sfarm_interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking CXX shared library libsfarm_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[14.670267] (-) TimerEvent: {}
+[14.771302] (-) TimerEvent: {}
+[14.848150] (sfarm_interfaces) StdoutLine: {'line': b'[ 72%] Built target sfarm_interfaces__rosidl_typesupport_cpp\n'}
+[14.871461] (-) TimerEvent: {}
+[14.872237] (sfarm_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/sfarm_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sfarm_interfaces/srv/detail/error__type_support_c.cpp.o\x1b[0m\n'}
+[14.972324] (-) TimerEvent: {}
+[15.072747] (-) TimerEvent: {}
+[15.175446] (-) TimerEvent: {}
+[15.202791] (sfarm_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library libsfarm_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[15.275582] (-) TimerEvent: {}
+[15.376050] (-) TimerEvent: {}
+[15.470448] (sfarm_interfaces) StdoutLine: {'line': b'[ 76%] Built target sfarm_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[15.476281] (-) TimerEvent: {}
+[15.579511] (-) TimerEvent: {}
+[15.679917] (-) TimerEvent: {}
+[15.781287] (-) TimerEvent: {}
+[15.881699] (-) TimerEvent: {}
+[15.982130] (-) TimerEvent: {}
+[16.083287] (-) TimerEvent: {}
+[16.183700] (-) TimerEvent: {}
+[16.284212] (-) TimerEvent: {}
+[16.384649] (-) TimerEvent: {}
+[16.392958] (sfarm_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX shared library libsfarm_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[16.484794] (-) TimerEvent: {}
+[16.540013] (sfarm_interfaces) StdoutLine: {'line': b'[ 78%] Built target sfarm_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[16.584981] (-) TimerEvent: {}
+[16.685309] (-) TimerEvent: {}
+[16.785654] (-) TimerEvent: {}
+[16.822360] (sfarm_interfaces) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking CXX shared library libsfarm_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[16.885845] (-) TimerEvent: {}
+[16.986242] (-) TimerEvent: {}
+[16.998949] (sfarm_interfaces) StdoutLine: {'line': b'[ 80%] Built target sfarm_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[17.032224] (sfarm_interfaces) StdoutLine: {'line': b'[ 80%] Built target sfarm_interfaces\n'}
+[17.067252] (sfarm_interfaces) StdoutLine: {'line': b'[ 81%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[17.086313] (-) TimerEvent: {}
+[17.186683] (-) TimerEvent: {}
+[17.287007] (-) TimerEvent: {}
+[17.387328] (-) TimerEvent: {}
+[17.487655] (-) TimerEvent: {}
+[17.587982] (-) TimerEvent: {}
+[17.688365] (-) TimerEvent: {}
+[17.788685] (-) TimerEvent: {}
+[17.889044] (-) TimerEvent: {}
+[17.989380] (-) TimerEvent: {}
+[18.089698] (-) TimerEvent: {}
+[18.190045] (-) TimerEvent: {}
+[18.290399] (-) TimerEvent: {}
+[18.390694] (-) TimerEvent: {}
+[18.491130] (-) TimerEvent: {}
+[18.591432] (-) TimerEvent: {}
+[18.691801] (-) TimerEvent: {}
+[18.792141] (-) TimerEvent: {}
+[18.892526] (-) TimerEvent: {}
+[18.992842] (-) TimerEvent: {}
+[19.093214] (-) TimerEvent: {}
+[19.193572] (-) TimerEvent: {}
+[19.293890] (-) TimerEvent: {}
+[19.394274] (-) TimerEvent: {}
+[19.497420] (-) TimerEvent: {}
+[19.597788] (-) TimerEvent: {}
+[19.698112] (-) TimerEvent: {}
+[19.798468] (-) TimerEvent: {}
+[19.898837] (-) TimerEvent: {}
+[19.999154] (-) TimerEvent: {}
+[20.044877] (sfarm_interfaces) StdoutLine: {'line': b'[ 81%] Built target sfarm_interfaces__py\n'}
+[20.078912] (sfarm_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/sfarm_interfaces/action/_eject_s.c.o\x1b[0m\n'}
+[20.079231] (sfarm_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/sfarm_interfaces/srv/_error_s.c.o\x1b[0m\n'}
+[20.079395] (sfarm_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces__rosidl_generator_py.dir/rosidl_generator_py/sfarm_interfaces/action/_insert_s.c.o\x1b[0m\n'}
+[20.099316] (-) TimerEvent: {}
+[20.199691] (-) TimerEvent: {}
+[20.300066] (-) TimerEvent: {}
+[20.400496] (-) TimerEvent: {}
+[20.482099] (sfarm_interfaces) StdoutLine: {'line': b'[ 89%] \x1b[32m\x1b[1mLinking C shared library libsfarm_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[20.500657] (-) TimerEvent: {}
+[20.562350] (sfarm_interfaces) StdoutLine: {'line': b'[ 89%] Built target sfarm_interfaces__rosidl_generator_py\n'}
+[20.596700] (sfarm_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/sfarm_interfaces/_sfarm_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[20.597129] (sfarm_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/sfarm_interfaces/_sfarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[20.597414] (sfarm_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/sfarm_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/sfarm_interfaces/_sfarm_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[20.600778] (-) TimerEvent: {}
+[20.701149] (-) TimerEvent: {}
+[20.801628] (-) TimerEvent: {}
+[20.902014] (-) TimerEvent: {}
+[20.922012] (sfarm_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[20.924649] (sfarm_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[20.925105] (sfarm_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[20.977741] (sfarm_interfaces) StdoutLine: {'line': b'[100%] Built target sfarm_interfaces_s__rosidl_typesupport_c\n'}
+[20.981334] (sfarm_interfaces) StdoutLine: {'line': b'[100%] Built target sfarm_interfaces_s__rosidl_typesupport_introspection_c\n'}
+[20.982038] (sfarm_interfaces) StdoutLine: {'line': b'[100%] Built target sfarm_interfaces_s__rosidl_typesupport_fastrtps_c\n'}
+[21.001472] (sfarm_interfaces) CommandEnded: {'returncode': 0}
+[21.002061] (-) TimerEvent: {}
+[21.002695] (sfarm_interfaces) JobProgress: {'identifier': 'sfarm_interfaces', 'progress': 'install'}
+[21.019567] (sfarm_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces'], 'cwd': '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces', 'env': OrderedDict({'GZ_SIM_SYSTEM_PLUGIN_PATH': '/opt/ros/jazzy/lib', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'EGL_PLATFORM': 'wayland', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'rokey', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'GIT_ASKPASS': '/usr/share/code/resources/app/extensions/git/dist/askpass.sh', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/rokey', 'CHROME_DESKTOP': 'com.microsoft.VSCode.desktop', 'OLDPWD': '/home/rokey/workspace/genghiskan_ros2', 'TERM_PROGRAM_VERSION': '1.145.2', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/com.microsoft.VSCode.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/share/code/code', 'MANAGERPID': '2282', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'SYSTEMD_EXEC_PID': '2544', 'BUNDLED_DEBUGPY_PATH': '/home/rokey/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/libs/debugpy', 'IM_CONFIG_CHECK_ENV': '1', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '4101', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rokey', 'JOURNAL_STREAM': '10:15113', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'rokey', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'PATH': '/home/rokey/.local/bin:/home/rokey/.opencode/bin:/home/rokey/.local/bin:/home/rokey/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/rokey/.local/bin:/home/rokey/.opencode/bin:/home/rokey/.local/bin:/home/rokey/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/rokey/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts:/home/rokey/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/usr/share/code/bin/copilot-shim', 'SESSION_MANAGER': 'local/rokey-550XBE-350XBE:@/tmp/.ICE-unix/2507,unix/rokey-550XBE-350XBE:/tmp/.ICE-unix/2507', 'INVOCATION_ID': '0dbfff34e981472f9520f199afeb1ee6', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/rokey/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-2d7444549ebe6dce.txt', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'PYTHONSTARTUP': '/home/rokey/.config/Code/User/workspaceStorage/310425ca367654b1f1a0be166348dc40/ms-python.python/pythonrc.py', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.RKUPY3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-77a9f97213.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '20', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'COPILOT_DEBUG_NONCE': '22247ed3f7b2bb09532fea0637f7f112', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages:/home/rokey/ws_cobot_pjt/ws_dsr/install/dsr_common2/lib/dsr_common2/imp:/home/rokey/ws_cobot_pjt/ws_dsr/install/dsr_common2/lib/dsr_common2/imp', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[21.033337] (sfarm_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[21.034624] (sfarm_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[21.035212] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/ament_index/resource_index/rosidl_interfaces/sfarm_interfaces\n'}
+[21.052837] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/action/Insert.json\n'}
+[21.074915] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/action/Eject.json\n'}
+[21.095908] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/srv/Error.json\n'}
+[21.102239] (-) TimerEvent: {}
+[21.119388] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__functions.h\n'}
+[21.140397] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__struct.h\n'}
+[21.160927] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__type_support.h\n'}
+[21.181055] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__functions.h\n'}
+[21.201624] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__struct.h\n'}
+[21.202333] (-) TimerEvent: {}
+[21.223868] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__type_support.h\n'}
+[21.244291] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/eject.h\n'}
+[21.264490] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/insert.h\n'}
+[21.280521] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[21.295026] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__functions.h\n'}
+[21.302435] (-) TimerEvent: {}
+[21.310460] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__struct.h\n'}
+[21.325620] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__type_support.h\n'}
+[21.339727] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/error.h\n'}
+[21.354392] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/environment/library_path.sh\n'}
+[21.369002] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/environment/library_path.dsv\n'}
+[21.384082] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__rosidl_typesupport_fastrtps_c.h\n'}
+[21.398354] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__rosidl_typesupport_fastrtps_c.h\n'}
+[21.402555] (-) TimerEvent: {}
+[21.414148] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[21.435684] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__rosidl_typesupport_fastrtps_c.h\n'}
+[21.456610] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__rosidl_typesupport_introspection_c.h\n'}
+[21.477254] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__rosidl_typesupport_introspection_c.h\n'}
+[21.498852] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[21.502719] (-) TimerEvent: {}
+[21.522811] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__rosidl_typesupport_introspection_c.h\n'}
+[21.545988] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__builder.hpp\n'}
+[21.570360] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__struct.hpp\n'}
+[21.592382] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__traits.hpp\n'}
+[21.602909] (-) TimerEvent: {}
+[21.618493] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__type_support.hpp\n'}
+[21.648186] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__builder.hpp\n'}
+[21.676165] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__struct.hpp\n'}
+[21.703139] (-) TimerEvent: {}
+[21.703871] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__traits.hpp\n'}
+[21.732751] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__type_support.hpp\n'}
+[21.757500] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/eject.hpp\n'}
+[21.772888] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/insert.hpp\n'}
+[21.787806] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[21.802732] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__builder.hpp\n'}
+[21.803205] (-) TimerEvent: {}
+[21.819627] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__struct.hpp\n'}
+[21.835106] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__traits.hpp\n'}
+[21.849964] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__type_support.hpp\n'}
+[21.865261] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/error.hpp\n'}
+[21.881235] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[21.896202] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[21.903323] (-) TimerEvent: {}
+[21.912609] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[21.928486] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[21.943891] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/eject__rosidl_typesupport_introspection_cpp.hpp\n'}
+[21.959079] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/action/detail/insert__rosidl_typesupport_introspection_cpp.hpp\n'}
+[21.974239] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/include/sfarm_interfaces/sfarm_interfaces/srv/detail/error__rosidl_typesupport_introspection_cpp.hpp\n'}
+[21.989298] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/environment/pythonpath.sh\n'}
+[22.003440] (-) TimerEvent: {}
+[22.004589] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/environment/pythonpath.dsv\n'}
+[22.022505] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces-0.0.1-py3.12.egg-info/PKG-INFO\n'}
+[22.037021] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces-0.0.1-py3.12.egg-info/SOURCES.txt\n'}
+[22.050857] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces-0.0.1-py3.12.egg-info/dependency_links.txt\n'}
+[22.065937] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces-0.0.1-py3.12.egg-info/top_level.txt\n'}
+[22.081907] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/__init__.py\n'}
+[22.097043] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/_sfarm_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[22.103575] (-) TimerEvent: {}
+[22.111548] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/_sfarm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[22.125832] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/_sfarm_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[22.140747] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action/__init__.py\n'}
+[22.156339] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action/_eject.py\n'}
+[22.171116] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action/_eject_s.c\n'}
+[22.186785] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action/_insert.py\n'}
+[22.202504] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action/_insert_s.c\n'}
+[22.203787] (-) TimerEvent: {}
+[22.222004] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_c.so\n'}
+[22.237736] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[22.254090] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[22.270165] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/srv/__init__.py\n'}
+[22.285937] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/srv/_error.py\n'}
+[22.301392] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/srv/_error_s.c\n'}
+[22.303889] (-) TimerEvent: {}
+[22.318053] (sfarm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[22.318587] (sfarm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[22.319111] (sfarm_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/sfarm_interfaces_s__rosidl_typesupport_c.so\n'}
+[22.319924] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/rust/Cargo.toml\n'}
+[22.335587] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/rust/build.rs\n'}
+[22.349960] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/rust/src/action.rs\n'}
+[22.364141] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/rust/src/action/rmw.rs\n'}
+[22.378623] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/rust/src/lib.rs\n'}
+[22.392746] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/rust/src/srv.rs\n'}
+[22.404051] (-) TimerEvent: {}
+[22.407104] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/rust/src/srv/rmw.rs\n'}
+[22.423633] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/action/Insert.idl\n'}
+[22.437896] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/action/Eject.idl\n'}
+[22.452015] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/srv/Error.idl\n'}
+[22.466615] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/action/Insert.action\n'}
+[22.481203] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/action/Eject.action\n'}
+[22.495620] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/srv/Error.srv\n'}
+[22.504191] (-) TimerEvent: {}
+[22.510272] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/ament_index/resource_index/package_run_dependencies/sfarm_interfaces\n'}
+[22.526418] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/ament_index/resource_index/parent_prefix_path/sfarm_interfaces\n'}
+[22.540624] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/environment/ament_prefix_path.sh\n'}
+[22.555050] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/environment/ament_prefix_path.dsv\n'}
+[22.569788] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/environment/path.sh\n'}
+[22.584147] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/environment/path.dsv\n'}
+[22.598693] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/local_setup.bash\n'}
+[22.604297] (-) TimerEvent: {}
+[22.613962] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/local_setup.sh\n'}
+[22.632828] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/local_setup.zsh\n'}
+[22.649690] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/local_setup.dsv\n'}
+[22.666752] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/package.dsv\n'}
+[22.683813] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/ament_index/resource_index/packages/sfarm_interfaces\n'}
+[22.700781] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[22.704395] (-) TimerEvent: {}
+[22.725334] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[22.747881] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[22.768922] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[22.789114] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[22.804529] (-) TimerEvent: {}
+[22.808455] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[22.829892] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[22.849379] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/rosidl_cmake_aggregate_target-extras.cmake\n'}
+[22.865242] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfacesConfig.cmake\n'}
+[22.882451] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfacesConfig-version.cmake\n'}
+[22.899366] (sfarm_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/package.xml\n'}
+[22.904678] (-) TimerEvent: {}
+[22.915208] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_generator_c.so\n'}
+[22.916228] (sfarm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_generator_c.so" to ""\n'}
+[22.916757] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[22.917477] (sfarm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[22.917891] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[22.918635] (sfarm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[22.918914] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_c.so\n'}
+[22.919770] (sfarm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[22.920135] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[22.921899] (sfarm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[22.922321] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[22.923820] (sfarm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[22.924062] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_cpp.so\n'}
+[22.925486] (sfarm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[23.004873] (-) TimerEvent: {}
+[23.049716] (sfarm_interfaces) StdoutLine: {'line': b"Listing '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces'...\n"}
+[23.050032] (sfarm_interfaces) StdoutLine: {'line': b"Compiling '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/__init__.py'...\n"}
+[23.050176] (sfarm_interfaces) StdoutLine: {'line': b"Listing '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action'...\n"}
+[23.050337] (sfarm_interfaces) StdoutLine: {'line': b"Compiling '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action/__init__.py'...\n"}
+[23.050469] (sfarm_interfaces) StdoutLine: {'line': b"Compiling '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action/_eject.py'...\n"}
+[23.050608] (sfarm_interfaces) StdoutLine: {'line': b"Compiling '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/action/_insert.py'...\n"}
+[23.050752] (sfarm_interfaces) StdoutLine: {'line': b"Listing '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/srv'...\n"}
+[23.050878] (sfarm_interfaces) StdoutLine: {'line': b"Compiling '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/srv/__init__.py'...\n"}
+[23.050999] (sfarm_interfaces) StdoutLine: {'line': b"Compiling '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages/sfarm_interfaces/srv/_error.py'...\n"}
+[23.062806] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_generator_py.so\n'}
+[23.063475] (sfarm_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/libsfarm_interfaces__rosidl_generator_py.so" to ""\n'}
+[23.063809] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_generator_cExport.cmake\n'}
+[23.064034] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[23.064310] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[23.064558] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[23.064720] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[23.065014] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[23.065224] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[23.065474] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[23.065698] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_generator_cppExport.cmake\n'}
+[23.066004] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[23.066253] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[23.066412] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[23.066559] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[23.066762] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[23.066903] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/sfarm_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[23.067083] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_generator_pyExport.cmake\n'}
+[23.067251] (sfarm_interfaces) StdoutLine: {'line': b'-- Installing: /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/cmake/export_sfarm_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[23.070938] (sfarm_interfaces) CommandEnded: {'returncode': 0}
+[23.101551] (sfarm_interfaces) JobEnded: {'identifier': 'sfarm_interfaces', 'rc': 0}
+[23.102719] (-) EventReactorShutdown: {}

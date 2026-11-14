@@ -1,0 +1,2 @@
+[console_scripts]
+sfarm_bridge = sfarm_bridge.sfarm_bridge:main

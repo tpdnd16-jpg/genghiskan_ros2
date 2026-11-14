@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "sfarm_interfaces/srv/Error_Response",
+      "fields": [
+        {
+          "name": "structure_needs_at_least_one_member",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "sfarm_interfaces/srv/Error_Response",
+      "hash_string": "RIHS01_43033e4ab36f802b4a5ba7b690ef5749e66ebccbf6e75918cfa74e58753c3e37"
+    }
+  ]
+}

@@ -19,9 +19,26 @@ frontend/node_modules/
 frontend/dist/
 frontend/.env
 
-# sfarm_bridge
+# sfarm_bridge & ros2_ws build artifacts
 ros2_ws/src/sfarm_bridge/.env
 ros2_ws/src/sfarm_bridge/**/__pycache__/
+ros2_ws/src/**/.pytest_cache/
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Antigravity / AI Agent Settings
+.agents/
+.agent/
+_agents/
+_agent/
+AGENTS.md
+GEMINI.md
+CLAUDE.md
+ros2_ws/AGENTS.md
+ros2_ws/GEMINI.md
+**/AGENTS.md
+**/GEMINI.md
 
 # scripts/run.sh 로그·PID
 .run/

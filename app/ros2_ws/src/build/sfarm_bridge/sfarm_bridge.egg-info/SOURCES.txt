@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+resource/sfarm_bridge
+sfarm_bridge/__init__.py
+sfarm_bridge/sfarm_bridge.py
+sfarm_bridge.egg-info/PKG-INFO
+sfarm_bridge.egg-info/SOURCES.txt
+sfarm_bridge.egg-info/dependency_links.txt
+sfarm_bridge.egg-info/entry_points.txt
+sfarm_bridge.egg-info/requires.txt
+sfarm_bridge.egg-info/top_level.txt
+sfarm_bridge.egg-info/zip-safe

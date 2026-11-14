@@ -1,0 +1,4 @@
+source;share/sfarm_interfaces/local_setup.bash
+source;share/sfarm_interfaces/local_setup.dsv
+source;share/sfarm_interfaces/local_setup.sh
+source;share/sfarm_interfaces/local_setup.zsh

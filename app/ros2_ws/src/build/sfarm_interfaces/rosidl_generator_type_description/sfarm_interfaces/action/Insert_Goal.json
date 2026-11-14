@@ -1,0 +1,46 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "sfarm_interfaces/action/Insert_Goal",
+      "fields": [
+        {
+          "name": "work_id",
+          "type": {
+            "type_id": 2,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "start_pos_id",
+          "type": {
+            "type_id": 2,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "pos_3d_id",
+          "type": {
+            "type_id": 2,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "sfarm_interfaces/action/Insert_Goal",
+      "hash_string": "RIHS01_94c6cb37864ed8a4e0d04343e0af6d10f54b6c6e574410b0c936ac72d6f4ab9c"
+    }
+  ]
+}

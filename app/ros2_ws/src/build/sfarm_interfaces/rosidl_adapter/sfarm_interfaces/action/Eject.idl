@@ -1,0 +1,43 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from sfarm_interfaces/action/Eject.action
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module sfarm_interfaces {
+  module action {
+    @verbatim (language="comment", text=
+      "Goal (input)")
+    struct Eject_Goal {
+      int8 work_id;
+
+      int8 pos_3d_id;
+
+      int8 receive_pos_id;
+    };
+    module Eject_Result_Constants {
+      const uint8 WORK_TYPE_INSERT = 0;
+      const uint8 WORK_TYPE_EJECT = 1;
+    };
+    @verbatim (language="comment", text=
+      "Result (output)")
+    struct Eject_Result {
+      boolean success;
+
+      string message;
+
+      int8 work_id;
+
+      uint8 work_type;
+    };
+    @verbatim (language="comment", text=
+      "Feedback")
+    struct Eject_Feedback {
+      builtin_interfaces::msg::Time start_at;
+
+      builtin_interfaces::msg::Time end_at;
+
+      int8 work_id;
+    };
+  };
+};

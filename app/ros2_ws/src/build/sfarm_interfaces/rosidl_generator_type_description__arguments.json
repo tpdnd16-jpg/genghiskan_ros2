@@ -1,0 +1,15 @@
+{
+  "package_name": "sfarm_interfaces",
+  "output_dir": "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces/rosidl_generator_type_description/sfarm_interfaces",
+  "idl_tuples": [
+    "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces/rosidl_adapter/sfarm_interfaces:action/Insert.idl",
+    "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces/rosidl_adapter/sfarm_interfaces:action/Eject.idl",
+    "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces/rosidl_adapter/sfarm_interfaces:srv/Error.idl"
+  ],
+  "include_paths": [
+    "action_msgs:/opt/ros/jazzy/share/action_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "unique_identifier_msgs:/opt/ros/jazzy/share/unique_identifier_msgs",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs"
+  ]
+}

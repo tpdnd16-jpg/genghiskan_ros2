@@ -1,2 +1,0 @@
-[console_scripts]
-3farm_bridge = 3farm_bridge.3farm_bridge:main
