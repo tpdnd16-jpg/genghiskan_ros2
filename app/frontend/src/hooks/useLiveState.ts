@@ -11,7 +11,8 @@ export interface LogEntry {
 }
 
 export interface RefillAlert {
-  reason: "STOCK_EMPTY" | "ROBOT_NO_BOARD";
+  // 작업요청(SQS) 경로 전용: 적재대(board_stock)가 비었을 때의 알럿.
+  reason: "BOARD_STOCK_EMPTY";
 }
 
 export interface FeedbackEvent {
@@ -32,7 +33,7 @@ function upsertOrder(snapshot: StateSnapshot, order: Order): StateSnapshot {
   if (order.status === "WAITING") {
     waiting_orders.push(order);
     waiting_orders.sort((a, b) => a.created_at.localeCompare(b.created_at));
-  } else if (["LOADING", "PRINTING", "PRINT_DONE", "UNLOADING"].includes(order.status)) {
+  } else if (["DISPATCHING", "LOADING", "PRINTING", "PRINT_DONE", "UNLOADING"].includes(order.status)) {
     active_orders.push(order);
   } else if (order.status === "READY_FOR_PICKUP") {
     pickup_orders.push(order);
@@ -50,8 +51,8 @@ function summarize(type: string, data: Record<string, unknown>): string {
       return `주문 #${data.id} → ${data.status}`;
     case "printer.updated":
       return `프린터 ${data.slot ?? data.current_order_id} → ${data.status}`;
-    case "inventory.updated":
-      return `보드 재고 ${data.remaining_count}/${data.capacity}`;
+    case "board_stock.updated":
+      return `적재대 상태 갱신`;
     case "robot.state":
       return `로봇 상태 → ${data.state}`;
     case "robot.feedback":
@@ -116,8 +117,6 @@ export function useLiveState() {
               );
               return { ...prev, printers };
             }
-            case "inventory.updated":
-              return { ...prev, inventory: envelope.data as any };
             case "robot.state":
               return {
                 ...prev,

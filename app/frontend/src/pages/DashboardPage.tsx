@@ -2,34 +2,34 @@ import { useState } from "react";
 import { DashboardTemplate } from "../components/templates/DashboardTemplate";
 import { TopBar } from "../components/organisms/TopBar";
 import { WorkshopStage } from "../components/organisms/WorkshopStage";
-import { InventoryPanel } from "../components/organisms/InventoryPanel";
 import { OrderQueuePanel } from "../components/organisms/OrderQueuePanel";
 import { OrderForm } from "../components/organisms/OrderForm";
 import { DebugPanel } from "../components/organisms/DebugPanel";
 import { EventLogPanel } from "../components/organisms/EventLogPanel";
-import { RefillModal } from "../components/organisms/RefillModal";
+import { BoardStockRefillModal } from "../components/organisms/BoardStockRefillModal";
 import { useLiveState } from "../hooks/useLiveState";
-import { api } from "../lib/api";
+import { api, WorkRequestError } from "../lib/api";
 import type { Shape } from "../types";
 
 export function DashboardPage() {
   const { snapshot, connected, alert, log, setAlert, feedback, updateSimulator } = useLiveState();
-  const [refillCount, setRefillCount] = useState(6);
   const [orderError, setOrderError] = useState<string | null>(null);
 
   const handleOrder = async (customerName: string, shape: Shape) => {
     try {
       setOrderError(null);
-      await api.createOrder(customerName, shape);
+      // 작업요청(SQS) 경로: 베드·프린터를 즉시 확인해 가능하면 SQS로 디스패치한다
+      // (PRD: assets/docs/prd-work-request-sqs.md).
+      await api.createWorkRequest(customerName, shape);
       return true;
     } catch (e) {
-      setOrderError(String(e));
+      setOrderError(e instanceof WorkRequestError ? e.message : String(e));
       return false;
     }
   };
 
-  const handleRefill = async () => {
-    await api.refillInventory(refillCount);
+  const handleBoardStockRefillComplete = async () => {
+    await api.refillBoardStockComplete();
     setAlert(null);
   };
 
@@ -37,7 +37,7 @@ export function DashboardPage() {
     return <div className="app-loading">서버에 연결하는 중...</div>;
   }
 
-  const { printers, inventory, robot, waiting_orders, active_orders, pickup_orders, simulator } = snapshot;
+  const { printers, robot, waiting_orders, active_orders, pickup_orders, simulator } = snapshot;
 
   return (
     <DashboardTemplate
@@ -52,20 +52,11 @@ export function DashboardPage() {
       workshopStage={
         <WorkshopStage
           printers={printers}
-          inventory={inventory}
           waitingOrders={waiting_orders}
           activeOrders={active_orders}
           pickupOrders={pickup_orders}
           feedback={feedback}
           timeScale={simulator.time_scale}
-        />
-      }
-      inventoryPanel={
-        <InventoryPanel
-          inventory={inventory}
-          refillCount={refillCount}
-          onChangeRefillCount={setRefillCount}
-          onRefill={handleRefill}
         />
       }
       waitingQueue={<OrderQueuePanel title="대기 큐" orders={waiting_orders} />}
@@ -74,14 +65,7 @@ export function DashboardPage() {
       orderForm={<OrderForm onOrder={handleOrder} error={orderError} />}
       debugPanel={<DebugPanel onFault={(kind) => api.setDebugFault(kind)} />}
       eventLogPanel={<EventLogPanel log={log} />}
-      modal={
-        <RefillModal
-          alert={alert}
-          refillCount={refillCount}
-          onChangeRefillCount={setRefillCount}
-          onConfirm={handleRefill}
-        />
-      }
+      modal={<BoardStockRefillModal alert={alert} onConfirm={handleBoardStockRefillComplete} />}
     />
   );
 }

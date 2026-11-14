@@ -6,12 +6,11 @@ import { CustomerRow } from "../molecules/CustomerRow";
 import { RobotArm } from "../molecules/RobotArm";
 import { useRobotArm } from "../../hooks/useRobotArm";
 import { ARM_BASE, POSES, printerPose } from "../../lib/robotArm";
-import type { BoardInventory, Order, Printer } from "../../types";
+import type { Order, Printer } from "../../types";
 import type { FeedbackEvent } from "../../hooks/useLiveState";
 
 interface WorkshopStageProps {
   printers: Printer[];
-  inventory: BoardInventory;
   waitingOrders: Order[];
   activeOrders: Order[];
   pickupOrders: Order[];
@@ -22,7 +21,6 @@ interface WorkshopStageProps {
 /** PRD 8.1~8.3: 프린터·로봇팔·적재대·수령대·손님을 배치한 2D 업장 화면. */
 export function WorkshopStage({
   printers,
-  inventory,
   waitingOrders,
   activeOrders,
   pickupOrders,
@@ -35,7 +33,7 @@ export function WorkshopStage({
     return () => clearInterval(id);
   }, []);
 
-  const { wrist, elbow, holding } = useRobotArm(feedback, timeScale, inventory.remaining_count);
+  const { wrist, elbow, holding } = useRobotArm(feedback, timeScale);
   const inShopCount = waitingOrders.length + activeOrders.length + pickupOrders.length;
 
   // 적재대(STOCK)에서 보드를 집는 단계인 동안에만 맨 위 보드를 "꺼내는 중"으로 강조한다.
@@ -104,13 +102,7 @@ export function WorkshopStage({
           );
         })}
         <PickupCounter x={POSES.PICKUP.x} y={POSES.PICKUP.y} orders={displayedPickupOrders} />
-        <BoardStock
-          x={POSES.STOCK.x}
-          y={POSES.STOCK.y}
-          remaining={inventory.remaining_count}
-          capacity={inventory.capacity}
-          picking={pickingFromStock}
-        />
+        <BoardStock x={POSES.STOCK.x} y={POSES.STOCK.y} picking={pickingFromStock} />
         <CustomerRow x={POSES.PICKUP.x - 50} y={POSES.PICKUP.y + 60} count={inShopCount} />
         {/* 로봇팔은 정지 배경(적재대/수령대) 위에 겹칠 수 있으니 SVG 쌓임 순서상 마지막(맨 위)에 그린다 */}
         <RobotArm base={ARM_BASE} elbow={elbow} wrist={wrist} holding={holding} />

@@ -2,7 +2,17 @@ from datetime import datetime
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from app.enums import AlertReason, OrderSource, OrderStatus, PrinterStatus, RobotState, Shape, TaskStatus, TaskType
+from app.enums import (
+    AlertReason,
+    BoardStockStatus,
+    OrderSource,
+    OrderStatus,
+    PrinterStatus,
+    RobotState,
+    Shape,
+    TaskStatus,
+    TaskType,
+)
 
 
 class OrderCreateRequest(BaseModel):
@@ -39,12 +49,13 @@ class PrinterOut(BaseModel):
     updated_at: datetime
 
 
-class BoardInventoryOut(BaseModel):
+class BoardStockOut(BaseModel):
+    """적재대 층(1~3)별 상태 (PRD: assets/docs/prd-work-request-sqs.md 5장)."""
+
     model_config = ConfigDict(from_attributes=True)
 
-    remaining_count: int
-    capacity: int
-    refill_required: bool
+    slot: int
+    status: BoardStockStatus
     updated_at: datetime
 
 
@@ -78,13 +89,6 @@ class SimulatorSettingsPatch(BaseModel):
     time_scale: float | None = Field(default=None, gt=0)
 
 
-class InventoryRefillRequest(BaseModel):
-    count: int = Field(ge=0)
-    # False로 주면 DB 재고만 올리고 가상 로봇의 실물 보드 수는 그대로 둔다
-    # (요구사항 12: 실물 보드 없음 상황을 의도적으로 재현할 때 사용).
-    fill_physical: bool = True
-
-
 class DebugFaultRequest(BaseModel):
     kind: str  # NO_BOARD | GRIP_FAIL
     once: bool = True
@@ -92,7 +96,6 @@ class DebugFaultRequest(BaseModel):
 
 class StateSnapshot(BaseModel):
     printers: list[PrinterOut]
-    inventory: BoardInventoryOut
     robot: RobotStatusOut
     waiting_orders: list[OrderOut]
     active_orders: list[OrderOut]

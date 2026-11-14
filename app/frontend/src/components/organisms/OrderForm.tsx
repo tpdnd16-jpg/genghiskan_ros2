@@ -18,8 +18,8 @@ export function OrderForm({ onOrder, error }: OrderFormProps) {
 
   return (
     <section className="panel order-form">
-      <h2>주문하기</h2>
-      <Button onClick={() => setOpen(true)}>주문하기</Button>
+      <h2>작업요청</h2>
+      <Button onClick={() => setOpen(true)}>작업요청</Button>
       <OrderModal open={open} error={error} onClose={() => setOpen(false)} onSubmit={handleSubmit} />
     </section>
   );

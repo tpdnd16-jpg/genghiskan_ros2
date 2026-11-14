@@ -13,11 +13,10 @@ from app.core.events import broadcast_to_web
 from app.core.runtime import runtime
 from app.enums import ACTIVE_TASK_STATUSES, OrderStatus, PrinterStatus, RobotState, TaskStatus, TaskType
 from app.models import RobotTask
-from app.repositories.inventory_repository import InventoryRepository
 from app.repositories.order_repository import OrderRepository
 from app.repositories.printer_repository import PrinterRepository
 from app.repositories.robot_task_repository import RobotTaskRepository
-from app.schemas import BoardInventoryOut, OrderOut, PrinterOut
+from app.schemas import OrderOut, PrinterOut
 from app.services.dispatcher_service import DispatcherService
 
 
@@ -135,7 +134,7 @@ class BridgeProtocolService:
             if success:
                 task.status = TaskStatus.SUCCEEDED
                 if task.type == TaskType.LOAD:
-                    await BridgeProtocolService._apply_load_success(session, order, printer, now)
+                    await BridgeProtocolService._apply_load_success(order, printer, now)
                 else:
                     await BridgeProtocolService._apply_unload_success(order, printer, now)
                 order.updated_at = now
@@ -144,7 +143,7 @@ class BridgeProtocolService:
                 task.status = TaskStatus.FAILED
                 task.error_code = error_code
                 if task.type == TaskType.LOAD and error_code == "NO_BOARD":
-                    await BridgeProtocolService._apply_no_board(session, order, printer, now)
+                    await BridgeProtocolService._apply_no_board(order, printer, now)
                 else:
                     # GRIP_FAIL/MOTION_FAIL 등: 주문·슬롯은 현재 단계에 유지하고 로봇 ERROR로
                     # 넘겨 운영자 확인을 기다린다 (robot.state 메시지가 뒤이어 ERROR를 알린다).
@@ -161,17 +160,11 @@ class BridgeProtocolService:
         await DispatcherService.run_cycle()
 
     @staticmethod
-    async def _apply_load_success(session: AsyncSession, order, printer, now: datetime) -> None:
-        inventory = await InventoryRepository.get(session)
-        inventory.remaining_count = max(0, inventory.remaining_count - 1)
-        inventory.updated_at = now
+    async def _apply_load_success(order, printer, now: datetime) -> None:
         order.status = OrderStatus.PRINTING
         order.started_at = now
         printer.status = PrinterStatus.PRINTING
         printer.timer_ends_at = now + timedelta(seconds=order.print_duration_sec * runtime.simulator_time_scale)
-        await broadcast_to_web(
-            session, "inventory.updated", BoardInventoryOut.model_validate(inventory).model_dump(mode="json")
-        )
 
     @staticmethod
     async def _apply_unload_success(order, printer, now: datetime) -> None:
@@ -182,7 +175,7 @@ class BridgeProtocolService:
         printer.current_order_id = None
 
     @staticmethod
-    async def _apply_no_board(session: AsyncSession, order, printer, now: datetime) -> None:
+    async def _apply_no_board(order, printer, now: datetime) -> None:
         """실물과 DB가 어긋났다는 뜻이므로 실물(보드 없음) 기준으로 맞춘다 (요구사항 12)."""
         order.status = OrderStatus.WAITING
         order.printer_slot = None
@@ -190,15 +183,6 @@ class BridgeProtocolService:
         printer.current_order_id = None
         order.updated_at = now
         printer.updated_at = now
-
-        inventory = await InventoryRepository.get(session)
-        inventory.remaining_count = 0
-        inventory.refill_required = True
-        inventory.updated_at = now
-        await broadcast_to_web(
-            session, "inventory.updated", BoardInventoryOut.model_validate(inventory).model_dump(mode="json")
-        )
-        await broadcast_to_web(session, "alert.refill_required", {"reason": "ROBOT_NO_BOARD"})
 
     @staticmethod
     async def handle_robot_state(data: dict) -> None:

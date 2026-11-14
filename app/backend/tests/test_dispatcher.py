@@ -3,7 +3,7 @@ from sqlalchemy import select
 
 from app.core.database import AsyncSessionLocal
 from app.enums import OrderSource, OrderStatus, PrinterStatus, TaskStatus, TaskType
-from app.models import BoardInventory, Order, Printer, RobotTask
+from app.models import Order, Printer, RobotTask
 from app.services.bridge_protocol_service import BridgeProtocolService
 from app.services.dispatcher_service import DispatcherService
 from app.services.order_service import OrderService
@@ -68,25 +68,6 @@ async def test_unload_takes_priority_over_load():
         assert len(active) == 1
         assert active[0].type == TaskType.UNLOAD
         assert active[0].printer_slot == 2
-
-
-async def test_refill_alert_when_inventory_empty():
-    async with AsyncSessionLocal() as session:
-        inventory = await session.get(BoardInventory, 1)
-        inventory.remaining_count = 0
-        await session.commit()
-
-        await OrderService.create_order(session, shape=None, source=OrderSource.MANUAL)
-
-    async with AsyncSessionLocal() as session:
-        order = (await session.execute(select(Order))).scalars().one()
-        assert order.status == OrderStatus.WAITING  # LOAD로 넘어가지 못하고 대기 유지
-
-        inventory = await session.get(BoardInventory, 1)
-        assert inventory.refill_required is True
-
-        tasks = (await session.execute(select(RobotTask))).scalars().all()
-        assert tasks == []
 
 
 async def test_at_most_one_active_task_blocks_new_dispatch():

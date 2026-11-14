@@ -36,13 +36,13 @@ export function OrderModal({ open, error, onClose, onSubmit }: OrderModalProps) 
         <button type="button" className="modal-close" onClick={onClose} aria-label="닫기">
           ×
         </button>
-        <h3>주문하기</h3>
-        <p className="modal-subtitle">고객명과 요청사항을 입력하고 작업을 등록하세요.</p>
+        <h3>작업요청</h3>
+        <p className="modal-subtitle">유저이름과 작업내용을 입력하고 요청하세요.</p>
 
-        <TextField label="고객명" value={customerName} placeholder="고객명을 입력하세요" onChange={setCustomerName} />
+        <TextField label="유저이름" value={customerName} placeholder="유저이름을 입력하세요" onChange={setCustomerName} />
 
         <div className="order-modal-field">
-          <span className="field-label">요청사항</span>
+          <span className="field-label">작업내용</span>
           <div className="chip-row">
             {SHAPES.map((s) => (
               <button
@@ -64,7 +64,7 @@ export function OrderModal({ open, error, onClose, onSubmit }: OrderModalProps) 
             취소
           </Button>
           <Button className="btn-primary" onClick={handleSubmit}>
-            작업 넣기
+            요청하기
           </Button>
         </div>
       </div>

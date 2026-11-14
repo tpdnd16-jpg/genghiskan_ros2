@@ -16,10 +16,9 @@ async def test_health_and_order_flow():
         assert created.status_code == 201
         body = created.json()
         assert body["shape"] == "TRIANGLE"
-        assert body["status"] == "LOADING"  # 빈 프린터·재고가 있으므로 즉시 LOAD 디스패치
+        assert body["status"] == "LOADING"  # 빈 프린터가 있으므로 즉시 LOAD 디스패치
 
         state = client.get("/api/state")
         assert state.status_code == 200
         snapshot = state.json()
         assert snapshot["printers"][0]["slot"] == 1
-        assert snapshot["inventory"]["remaining_count"] == 10
