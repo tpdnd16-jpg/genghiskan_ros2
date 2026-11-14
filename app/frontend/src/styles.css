@@ -235,11 +235,6 @@ body {
   stroke-width: 2;
 }
 
-.wp-stock-empty .wp-stock-frame {
-  stroke: #e27e7e;
-  stroke-width: 3;
-}
-
 .wp-stock-label {
   fill: #9aa0ab;
 }
@@ -273,21 +268,6 @@ body {
 
 .wp-customer path {
   fill: #5a7fd6;
-}
-
-.inventory-empty {
-  color: #e27e7e;
-  font-weight: 600;
-}
-
-.refill-row {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.refill-row input {
-  width: 4rem;
 }
 
 .queue ul,

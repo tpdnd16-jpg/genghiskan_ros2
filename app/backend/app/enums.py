@@ -18,6 +18,9 @@ SHAPE_PRINT_DURATION_SEC: dict[Shape, int] = {
 
 class OrderStatus(str, Enum):
     WAITING = "WAITING"
+    # 작업요청(SQS) 경로 전용: LOAD 명령 발행 성공 ~ pick_complete 수신 전까지 ("투입중").
+    # PRD: assets/docs/prd-work-request-sqs.md 5장.
+    DISPATCHING = "DISPATCHING"
     LOADING = "LOADING"
     PRINTING = "PRINTING"
     PRINT_DONE = "PRINT_DONE"
@@ -70,5 +73,13 @@ class EventDirection(str, Enum):
 
 
 class AlertReason(str, Enum):
-    STOCK_EMPTY = "STOCK_EMPTY"
-    ROBOT_NO_BOARD = "ROBOT_NO_BOARD"
+    # 작업요청(SQS) 경로 전용 (PRD: assets/docs/prd-work-request-sqs.md 5장 "채우기 완료" 버튼).
+    BOARD_STOCK_EMPTY = "BOARD_STOCK_EMPTY"
+
+
+class BoardStockStatus(str, Enum):
+    """적재대 층(1~3)별 상태 (PRD: assets/docs/prd-work-request-sqs.md 5장)."""
+
+    EMPTY = "EMPTY"
+    RESERVED = "RESERVED"
+    OCCUPIED = "OCCUPIED"

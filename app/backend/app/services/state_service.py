@@ -1,11 +1,9 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.runtime import runtime
-from app.repositories.inventory_repository import InventoryRepository
 from app.repositories.order_repository import OrderRepository
 from app.repositories.printer_repository import PrinterRepository
 from app.schemas import (
-    BoardInventoryOut,
     OrderOut,
     PrinterOut,
     RobotStatusOut,
@@ -18,14 +16,12 @@ class StateService:
     @staticmethod
     async def build_snapshot(session: AsyncSession) -> StateSnapshot:
         printers = await PrinterRepository.list_all(session)
-        inventory = await InventoryRepository.get(session)
         waiting = await OrderRepository.get_waiting(session)
         active = await OrderRepository.get_active(session)
         pickup = await OrderRepository.get_pickup(session)
 
         return StateSnapshot(
             printers=[PrinterOut.model_validate(p) for p in printers],
-            inventory=BoardInventoryOut.model_validate(inventory),
             robot=RobotStatusOut(
                 state=runtime.robot_state,
                 current_task_id=runtime.current_task_id,

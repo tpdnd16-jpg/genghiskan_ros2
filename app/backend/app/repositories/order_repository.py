@@ -19,6 +19,11 @@ class OrderRepository:
         return await session.get(Order, order_id)
 
     @staticmethod
+    async def get_locked(session: AsyncSession, order_id: int) -> Order | None:
+        stmt = select(Order).where(Order.id == order_id)
+        return (await session.execute(lock_for_update(stmt, session))).scalars().first()
+
+    @staticmethod
     async def list_recent(
         session: AsyncSession, status: OrderStatus | None, limit: int
     ) -> list[Order]:

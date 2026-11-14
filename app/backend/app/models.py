@@ -1,10 +1,19 @@
 from datetime import datetime
 
-from sqlalchemy import JSON, BigInteger, Boolean, DateTime, Enum as SAEnum, ForeignKey, Index, Integer, SmallInteger, String
+from sqlalchemy import JSON, BigInteger, DateTime, Enum as SAEnum, ForeignKey, Index, Integer, SmallInteger, String
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.core.database import Base
-from app.enums import EventDirection, OrderSource, OrderStatus, PrinterStatus, Shape, TaskStatus, TaskType
+from app.enums import (
+    BoardStockStatus,
+    EventDirection,
+    OrderSource,
+    OrderStatus,
+    PrinterStatus,
+    Shape,
+    TaskStatus,
+    TaskType,
+)
 
 # SQLite는 ROWID 별칭(AUTOINCREMENT)으로 쓰려면 정확히 INTEGER 타입이 필요하다.
 # 운영 DB(MySQL)에서는 그대로 BIGINT를 쓰고, 테스트용 SQLite에서만 INTEGER로 내린다.
@@ -55,16 +64,6 @@ class Printer(Base):
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=False))
 
 
-class BoardInventory(Base):
-    __tablename__ = "board_inventory"
-
-    id: Mapped[int] = mapped_column(SmallInteger, primary_key=True)
-    remaining_count: Mapped[int] = mapped_column(Integer)
-    capacity: Mapped[int] = mapped_column(Integer)
-    refill_required: Mapped[bool] = mapped_column(Boolean, default=False)
-    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=False))
-
-
 class RobotTask(Base):
     __tablename__ = "robot_tasks"
 
@@ -77,9 +76,25 @@ class RobotTask(Base):
     )
     last_phase: Mapped[str | None] = mapped_column(String(32), nullable=True)
     error_code: Mapped[str | None] = mapped_column(String(32), nullable=True)
+    # 작업요청(SQS) 경로 전용: LOAD 발행 시 보낸 body 값의 스냅샷 (PRD 5장).
+    start_pos_id: Mapped[int | None] = mapped_column(SmallInteger, nullable=True)
+    sd_pos_id: Mapped[int | None] = mapped_column(SmallInteger, nullable=True)
     dispatched_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=False), nullable=True)
     started_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=False), nullable=True)
     finished_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=False), nullable=True)
+
+
+class BoardStock(Base):
+    """적재대 층(1~3)별 베드 적재 상태 (PRD: assets/docs/prd-work-request-sqs.md 5장).
+    로봇은 맨 위(슬롯 번호가 가장 큰 OCCUPIED 층)에서 집는다."""
+
+    __tablename__ = "board_stock"
+
+    slot: Mapped[int] = mapped_column(SmallInteger, primary_key=True)
+    status: Mapped[BoardStockStatus] = mapped_column(
+        SAEnum(BoardStockStatus, native_enum=True, length=16), default=BoardStockStatus.EMPTY
+    )
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=False))
 
 
 class EventLog(Base):

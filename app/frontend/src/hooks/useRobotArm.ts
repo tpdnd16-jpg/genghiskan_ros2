@@ -36,7 +36,7 @@ function armPoseFromWrist(wrist: Point, holding: boolean): ArmPose {
 /** PRD 8.3: feedback의 phase를 받아 목표 자세로 보간 이동한다. 다음 feedback이 먼저 오면 그 즉시 다음 목표로
  * 넘어간다. 잡기/놓기(holding)는 단계가 바뀌는 그 순간(즉, 아직 이전 목표 지점에 있을 때) 전환한다 — 이동 도중에
  * 전환하면 "수령대/적재대에 놓고 온 게 아니라 들고 돌아오는" 것처럼 보인다. */
-export function useRobotArm(feedback: FeedbackEvent | null, timeScale: number, stockRemaining: number): ArmPose {
+export function useRobotArm(feedback: FeedbackEvent | null, timeScale: number): ArmPose {
   const [pose, setPose] = useState<ArmPose>(() => armPoseFromWrist(POSES.HOME, false));
   const tweenRef = useRef<Tween | null>(null);
   const rafRef = useRef<number | null>(null);
@@ -49,9 +49,9 @@ export function useRobotArm(feedback: FeedbackEvent | null, timeScale: number, s
     const now = performance.now();
     const currentWrist = tweenRef.current ? wristAt(tweenRef.current, now).wrist : POSES.HOME;
     const target = resolvePhaseTarget(feedback.type, feedback.phase, feedback.slot, timeScale);
-    // STOCK은 재고가 쌓인 높이에 따라 맨 위 보드 위치가 달라지므로, BoardStock 그림과 같은 좌표를
-    // 쓰는 stockPickPoint로 보정한다(그 외 포즈는 고정된 POSES 좌표를 그대로 쓴다).
-    const targetPoint = target.pose === "STOCK" ? stockPickPoint(stockRemaining) : POSES[target.pose];
+    // STOCK은 BoardStock 그림과 같은 좌표를 쓰는 stockPickPoint로 보정한다
+    // (그 외 포즈는 고정된 POSES 좌표를 그대로 쓴다).
+    const targetPoint = target.pose === "STOCK" ? stockPickPoint() : POSES[target.pose];
 
     tweenRef.current = {
       from: currentWrist,

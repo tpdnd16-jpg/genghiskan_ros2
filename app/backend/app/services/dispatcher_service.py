@@ -12,7 +12,6 @@ from app.core.events import broadcast_to_web, send_to_bridge
 from app.core.runtime import runtime
 from app.enums import ACTIVE_TASK_STATUSES, OrderStatus, PrinterStatus, RobotState, TaskStatus, TaskType
 from app.models import Order, Printer, RobotTask
-from app.repositories.inventory_repository import InventoryRepository
 from app.repositories.order_repository import OrderRepository
 from app.repositories.printer_repository import PrinterRepository
 from app.repositories.robot_task_repository import RobotTaskRepository
@@ -45,15 +44,10 @@ class DispatcherService:
 
             reserved = await DispatcherService._try_reserve_unload(session)
             if reserved is None:
-                result = await DispatcherService._try_reserve_load(session)
-                if result == "REFILL_ALERT":
-                    await broadcast_to_web(session, "alert.refill_required", {"reason": "STOCK_EMPTY"})
-                    await session.commit()
-                    return
-                if result is None:
+                reserved = await DispatcherService._try_reserve_load(session)
+                if reserved is None:
                     await session.rollback()
                     return
-                reserved = result
 
             await broadcast_to_web(
                 session, "order.updated", OrderOut.model_validate(reserved.order).model_dump(mode="json")
@@ -107,10 +101,8 @@ class DispatcherService:
         return _ReservedTask(task=task, order=order, printer=printer)
 
     @staticmethod
-    async def _try_reserve_load(session: AsyncSession) -> _ReservedTask | None | str:
-        """LOAD 작업을 예약한다. 재고가 없으면 'REFILL_ALERT' 문자열을 반환한다."""
-        inventory = await InventoryRepository.get_locked(session)
-
+    async def _try_reserve_load(session: AsyncSession) -> _ReservedTask | None:
+        """LOAD 작업을 예약한다."""
         order = await OrderRepository.oldest_waiting_locked(session)
         if order is None:
             return None
@@ -118,13 +110,6 @@ class DispatcherService:
         printer = await PrinterRepository.first_empty_locked(session)
         if printer is None:
             return None
-
-        if inventory.remaining_count < 1 or inventory.refill_required:
-            was_required = inventory.refill_required
-            inventory.refill_required = True
-            inventory.updated_at = datetime.utcnow()
-            await session.flush()
-            return None if was_required else "REFILL_ALERT"
 
         now = datetime.utcnow()
         task = RobotTask(

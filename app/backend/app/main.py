@@ -4,34 +4,39 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.routers import debug, health, inventory, orders, simulator, state, stats
+from app.api.routers import board_stock, debug, health, orders, simulator, state, stats, work_requests
 from app.api.ws import bridge_ws, client_ws
 from app.core.bootstrap import ensure_seed_data
 from app.core.config import settings
 from app.core.database import AsyncSessionLocal
 from app.services.dispatcher_service import DispatcherService
 from app.services.simulator_service import SimulatorService
+from app.services.sqs_consumer_service import SqsConsumerService
 from app.services.timer_service import TimerService
-
-_background_tasks: list[asyncio.Task] = []
-
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     async with AsyncSessionLocal() as session:
         await ensure_seed_data(session)
 
-    _background_tasks.append(asyncio.create_task(TimerService.sweep_loop()))
-    _background_tasks.append(asyncio.create_task(SimulatorService.auto_order_loop()))
+    # 루프 범위 변수로 둔다 (모듈 전역이면 lifespan을 여러 번 도는 테스트에서 이전
+    # 이벤트 루프의 완료된 태스크가 남아 있다가 asyncio.gather에서 "다른 루프에 속한
+    # future" 오류를 낸다).
+    background_tasks = [
+        asyncio.create_task(TimerService.sweep_loop()),
+        asyncio.create_task(SimulatorService.auto_order_loop()),
+        # 작업요청(SQS) 경로 전용: event_queue_url 미설정이면 즉시 반환해 아무 일도 안 한다.
+        asyncio.create_task(SqsConsumerService.robot_events_loop()),
+    ]
 
     # 서버 재시작 복구: DB 상태 기준으로 즉시 한 번 평가한다 (로봇이 아직 연결 전이면 no-op).
     await DispatcherService.run_cycle()
 
     yield
 
-    for task in _background_tasks:
+    for task in background_tasks:
         task.cancel()
-    await asyncio.gather(*_background_tasks, return_exceptions=True)
+    await asyncio.gather(*background_tasks, return_exceptions=True)
 
 
 app = FastAPI(title="소규모 3D 프린트 업장 관리 로봇 - 서버", lifespan=lifespan)
@@ -46,11 +51,12 @@ app.add_middleware(
 
 app.include_router(orders.router)
 app.include_router(state.router)
-app.include_router(inventory.router)
 app.include_router(simulator.router)
 app.include_router(debug.router)
 app.include_router(stats.router)
 app.include_router(health.router)
+app.include_router(work_requests.router)
+app.include_router(board_stock.router)
 
 app.include_router(client_ws.router)
 app.include_router(bridge_ws.router)

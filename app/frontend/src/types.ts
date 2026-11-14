@@ -2,6 +2,8 @@ export type Shape = "TRIANGLE" | "SQUARE" | "STAR" | "CIRCLE";
 
 export type OrderStatus =
   | "WAITING"
+  // 작업요청(SQS) 경로 전용: LOAD 발행 성공 ~ pick_complete 수신 전까지 ("투입중").
+  | "DISPATCHING"
   | "LOADING"
   | "PRINTING"
   | "PRINT_DONE"
@@ -11,6 +13,15 @@ export type OrderStatus =
 
 export type PrinterStatus = "EMPTY" | "RESERVED" | "PRINTING" | "DONE" | "UNLOADING";
 export type RobotState = "IDLE" | "BUSY" | "ERROR" | "DISCONNECTED";
+
+// 작업요청(SQS) 경로 전용: 적재대 층(1~3)별 상태.
+export type BoardStockSlotStatus = "EMPTY" | "RESERVED" | "OCCUPIED";
+
+export interface BoardStockSlot {
+  slot: number;
+  status: BoardStockSlotStatus;
+  updated_at: string;
+}
 
 export interface Order {
   id: number;
@@ -37,13 +48,6 @@ export interface Printer {
   updated_at: string;
 }
 
-export interface BoardInventory {
-  remaining_count: number;
-  capacity: number;
-  refill_required: boolean;
-  updated_at: string;
-}
-
 export interface RobotStatus {
   state: RobotState;
   current_task_id: number | null;
@@ -58,7 +62,6 @@ export interface SimulatorSettings {
 
 export interface StateSnapshot {
   printers: Printer[];
-  inventory: BoardInventory;
   robot: RobotStatus;
   waiting_orders: Order[];
   active_orders: Order[];
