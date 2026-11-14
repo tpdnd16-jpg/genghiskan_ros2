@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "sfarm_interfaces/srv/Error_Request",
+      "fields": [
+        {
+          "name": "message",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "sfarm_interfaces/srv/Error_Request",
+      "hash_string": "RIHS01_e4e98981b984d5a837c10f0c6b195ac1ff8abe17e06f95ba46ec005f94033418"
+    }
+  ]
+}

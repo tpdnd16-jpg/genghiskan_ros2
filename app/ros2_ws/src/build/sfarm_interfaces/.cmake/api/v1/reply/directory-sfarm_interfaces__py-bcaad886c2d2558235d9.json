@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "sfarm_interfaces__py",
+		"source" : "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces/sfarm_interfaces__py"
+	}
+}

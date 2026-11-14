@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from sfarm_interfaces/srv/Error.srv
+// generated code does not contain a copyright notice
+
+
+module sfarm_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "Request")
+    struct Error_Request {
+      string message;
+    };
+    @verbatim (language="comment", text=
+      "Response")
+    struct Error_Response {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

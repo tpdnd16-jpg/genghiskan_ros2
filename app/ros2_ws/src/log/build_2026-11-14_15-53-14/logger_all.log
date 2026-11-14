@@ -1,0 +1,200 @@
+[0.291s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.291s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x76ea5e946060>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x76ea5eb2d6d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x76ea5eb2d6d0>>, mixin_verb=('build',))
+[0.368s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.368s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.368s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.368s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.368s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.368s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.368s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_bridge) by extension 'ignore'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_bridge) by extension 'ignore_ament_install'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_bridge) by extensions ['colcon_pkg']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_bridge) by extension 'colcon_pkg'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_bridge) by extensions ['colcon_meta']
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_bridge) by extension 'colcon_meta'
+[0.422s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_bridge) by extensions ['ros']
+[0.423s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_bridge) by extension 'ros'
+[0.427s] DEBUG:colcon.colcon_core.package_identification:Package 'sfarm_bridge' with type 'ros.ament_python' and name 'sfarm_bridge'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_interfaces) by extension 'ignore'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_interfaces) by extension 'ignore_ament_install'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_interfaces) by extensions ['colcon_pkg']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_interfaces) by extension 'colcon_pkg'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_interfaces) by extensions ['colcon_meta']
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_interfaces) by extension 'colcon_meta'
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_interfaces) by extensions ['ros']
+[0.428s] Level 1:colcon.colcon_core.package_identification:_identify(sfarm_interfaces) by extension 'ros'
+[0.429s] DEBUG:colcon.colcon_core.package_identification:Package 'sfarm_interfaces' with type 'ros.ament_cmake' and name 'sfarm_interfaces'
+[0.429s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.429s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.429s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.429s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.429s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.476s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.476s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.487s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 439 installed packages in /opt/ros/jazzy
+[0.492s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.698s] Level 5:colcon.colcon_core.verb:set package 'sfarm_bridge' build argument 'cmake_args' from command line to 'None'
+[0.698s] Level 5:colcon.colcon_core.verb:set package 'sfarm_bridge' build argument 'cmake_target' from command line to 'None'
+[0.698s] Level 5:colcon.colcon_core.verb:set package 'sfarm_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.698s] Level 5:colcon.colcon_core.verb:set package 'sfarm_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[0.698s] Level 5:colcon.colcon_core.verb:set package 'sfarm_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[0.699s] Level 5:colcon.colcon_core.verb:set package 'sfarm_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[0.699s] Level 5:colcon.colcon_core.verb:set package 'sfarm_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[0.699s] Level 5:colcon.colcon_core.verb:set package 'sfarm_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.699s] Level 5:colcon.colcon_core.verb:set package 'sfarm_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.699s] DEBUG:colcon.colcon_core.verb:Building package 'sfarm_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge', 'merge_install': False, 'path': '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/sfarm_bridge', 'symlink_install': True, 'test_result_base': None}
+[0.700s] Level 5:colcon.colcon_core.verb:set package 'sfarm_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.700s] Level 5:colcon.colcon_core.verb:set package 'sfarm_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.700s] Level 5:colcon.colcon_core.verb:set package 'sfarm_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.700s] Level 5:colcon.colcon_core.verb:set package 'sfarm_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.700s] Level 5:colcon.colcon_core.verb:set package 'sfarm_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.700s] Level 5:colcon.colcon_core.verb:set package 'sfarm_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.700s] Level 5:colcon.colcon_core.verb:set package 'sfarm_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.700s] Level 5:colcon.colcon_core.verb:set package 'sfarm_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.700s] Level 5:colcon.colcon_core.verb:set package 'sfarm_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.701s] DEBUG:colcon.colcon_core.verb:Building package 'sfarm_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces', 'merge_install': False, 'path': '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/sfarm_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.701s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.703s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.704s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/sfarm_bridge' with build type 'ament_python'
+[0.704s] Level 1:colcon.colcon_core.shell:create_environment_hook('sfarm_bridge', 'ament_prefix_path')
+[0.709s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.710s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/share/sfarm_bridge/hook/ament_prefix_path.ps1'
+[0.712s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/share/sfarm_bridge/hook/ament_prefix_path.dsv'
+[0.713s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/share/sfarm_bridge/hook/ament_prefix_path.sh'
+[0.715s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.715s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.726s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/sfarm_interfaces' with build type 'ament_cmake'
+[0.727s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/sfarm_interfaces'
+[0.727s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.727s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.427s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/sfarm_bridge'
+[1.427s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.427s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.442s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/sfarm_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces
+[3.240s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: compile_catalog, bdist_wheel, build_clib, develop, bdist_dumb, bdist_rpm, alias, editable_wheel, check, bdist_egg, extract_messages, init_catalog, dist_info, install, install_headers, upload_docs, update_catalog, build_scripts, install_lib, clean, egg_info, install_data, bdist, install_scripts, upload, build_py, easy_install, rotate, sdist, symlink_data, build_ext, test, register, saveopts, build, setopt, install_egg_info
+[4.000s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --quiet, --site-dirs, --optimize, --dry-run, --uninstall, --build-directory, --no-find-links, --no-user-cfg, --install-dir, --script-dir, --upgrade, --allow-hosts, --always-copy, --force-installation-into-system-dir, --version, --egg-path, --no-deps, --zip-ok, --record, --index-url, --user, --editable, --help, --prefix, --find-links, --local-snapshots-ok, --install-layout, --verbose, --multi-version, --always-unzip, --exclude-scripts
+[4.004s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_bridge': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_bridge/build --no-deps symlink_data
+[5.567s] Level 1:colcon.colcon_core.shell:create_environment_hook('sfarm_bridge', 'pythonpath_develop')
+[5.567s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_bridge/share/sfarm_bridge/hook/pythonpath_develop.ps1'
+[5.568s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_bridge' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_bridge/build --no-deps symlink_data
+[5.569s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_bridge/share/sfarm_bridge/hook/pythonpath_develop.dsv'
+[5.569s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_bridge/share/sfarm_bridge/hook/pythonpath_develop.sh'
+[5.573s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge' for CMake module files
+[5.574s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge' for CMake config files
+[5.575s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/lib'
+[5.576s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/bin'
+[5.576s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/lib/pkgconfig/sfarm_bridge.pc'
+[5.576s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/lib/python3.12/site-packages'
+[5.576s] Level 1:colcon.colcon_core.shell:create_environment_hook('sfarm_bridge', 'pythonpath')
+[5.577s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/share/sfarm_bridge/hook/pythonpath.ps1'
+[5.578s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/share/sfarm_bridge/hook/pythonpath.dsv'
+[5.578s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/share/sfarm_bridge/hook/pythonpath.sh'
+[5.579s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/bin'
+[5.580s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sfarm_bridge)
+[5.580s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/share/sfarm_bridge/package.ps1'
+[5.582s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/share/sfarm_bridge/package.dsv'
+[5.583s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/share/sfarm_bridge/package.sh'
+[5.584s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/share/sfarm_bridge/package.bash'
+[5.585s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/share/sfarm_bridge/package.zsh'
+[5.586s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_bridge/share/colcon-core/packages/sfarm_bridge)
+[8.129s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/sfarm_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces
+[8.131s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces -- -j8 -l8
+[21.705s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces -- -j8 -l8
+[21.723s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces
+[23.773s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sfarm_interfaces)
+[23.773s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces' for CMake module files
+[23.774s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/build/sfarm_interfaces
+[23.776s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces' for CMake config files
+[23.776s] Level 1:colcon.colcon_core.shell:create_environment_hook('sfarm_interfaces', 'cmake_prefix_path')
+[23.776s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/cmake_prefix_path.ps1'
+[23.777s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/cmake_prefix_path.dsv'
+[23.778s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/cmake_prefix_path.sh'
+[23.779s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib'
+[23.779s] Level 1:colcon.colcon_core.shell:create_environment_hook('sfarm_interfaces', 'ld_library_path_lib')
+[23.779s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/ld_library_path_lib.ps1'
+[23.780s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/ld_library_path_lib.dsv'
+[23.780s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/ld_library_path_lib.sh'
+[23.781s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/bin'
+[23.781s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/pkgconfig/sfarm_interfaces.pc'
+[23.781s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages'
+[23.782s] Level 1:colcon.colcon_core.shell:create_environment_hook('sfarm_interfaces', 'pythonpath')
+[23.782s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/pythonpath.ps1'
+[23.782s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/pythonpath.dsv'
+[23.783s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/pythonpath.sh'
+[23.784s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/bin'
+[23.785s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/package.ps1'
+[23.786s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/package.dsv'
+[23.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/package.sh'
+[23.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/package.bash'
+[23.788s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/package.zsh'
+[23.788s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/colcon-core/packages/sfarm_interfaces)
+[23.789s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sfarm_interfaces)
+[23.790s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces' for CMake module files
+[23.791s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces' for CMake config files
+[23.791s] Level 1:colcon.colcon_core.shell:create_environment_hook('sfarm_interfaces', 'cmake_prefix_path')
+[23.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/cmake_prefix_path.ps1'
+[23.792s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/cmake_prefix_path.dsv'
+[23.793s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/cmake_prefix_path.sh'
+[23.794s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib'
+[23.794s] Level 1:colcon.colcon_core.shell:create_environment_hook('sfarm_interfaces', 'ld_library_path_lib')
+[23.794s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/ld_library_path_lib.ps1'
+[23.795s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/ld_library_path_lib.dsv'
+[23.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/ld_library_path_lib.sh'
+[23.796s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/bin'
+[23.796s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/pkgconfig/sfarm_interfaces.pc'
+[23.796s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/lib/python3.12/site-packages'
+[23.797s] Level 1:colcon.colcon_core.shell:create_environment_hook('sfarm_interfaces', 'pythonpath')
+[23.797s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/pythonpath.ps1'
+[23.797s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/pythonpath.dsv'
+[23.798s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/hook/pythonpath.sh'
+[23.799s] Level 1:colcon.colcon_core.environment:checking '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/bin'
+[23.800s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/package.ps1'
+[23.801s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/package.dsv'
+[23.802s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/package.sh'
+[23.803s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/package.bash'
+[23.803s] INFO:colcon.colcon_core.shell:Creating package script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/sfarm_interfaces/package.zsh'
+[23.804s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/sfarm_interfaces/share/colcon-core/packages/sfarm_interfaces)
+[23.804s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[23.805s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[23.805s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[23.805s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[23.815s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[23.815s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[23.815s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[23.847s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[23.847s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/local_setup.ps1'
+[23.849s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/_local_setup_util_ps1.py'
+[23.852s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/setup.ps1'
+[23.854s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/local_setup.sh'
+[23.855s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/_local_setup_util_sh.py'
+[23.856s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/setup.sh'
+[23.858s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/local_setup.bash'
+[23.881s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/setup.bash'
+[23.883s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/local_setup.zsh'
+[23.884s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/install/setup.zsh'

@@ -1,0 +1,8 @@
+{
+  "package_name": "sfarm_interfaces",
+  "non_idl_tuples": [
+    "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/sfarm_interfaces:action/Insert.action",
+    "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/sfarm_interfaces:action/Eject.action",
+    "/home/rokey/workspace/genghiskan_ros2/app/ros2_ws/src/sfarm_interfaces:srv/Error.srv"
+  ]
+}

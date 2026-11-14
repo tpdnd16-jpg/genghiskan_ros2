@@ -1,0 +1,18 @@
+# Goal (input)
+int8 work_id
+int8 start_pos_id
+int8 pos_3d_id
+---
+# Result (output)
+uint8 WORK_TYPE_INSERT=0
+uint8 WORK_TYPE_EJECT=1
+
+bool success
+string message
+int8 work_id
+uint8 work_type
+---
+# Feedback
+builtin_interfaces/Time start_at
+builtin_interfaces/Time end_at
+int8 work_id

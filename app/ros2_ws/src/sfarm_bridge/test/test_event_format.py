@@ -17,9 +17,12 @@
 from datetime import datetime
 
 from sfarm_bridge.sfarm_bridge import (
+    build_action_result_event,
     build_robot_event,
     DEFAULT_EVENT_QUEUE_URL,
+    parse_task_command,
 )
+from sfarm_interfaces.action import Insert
 
 
 def test_default_event_queue_url():
@@ -81,3 +84,33 @@ def test_build_robot_event_variants():
     bad_evt = build_robot_event(bad_cmd, 'robot-arm-1')
     assert bad_evt['event_type'] == 'REJECTED'
     assert bad_evt['reason'] == 'unknown type'
+
+
+def test_parse_task_command_insert_and_eject():
+    """Verify SQS insert/eject payloads parse into ROS 2 action goals."""
+    insert_cmd = {'work_id': 16, 'start_pos_id': 3, 'sd_pos_id': 2}
+    kind, fields = parse_task_command(insert_cmd)
+    assert kind == 'INSERT'
+    assert fields == {'work_id': 16, 'start_pos_id': 3, 'pos_3d_id': 2}
+
+    eject_cmd = {'work_id': 17, 'sd_pos_id': 2, 'receive_pos_id': 1}
+    kind2, fields2 = parse_task_command(eject_cmd)
+    assert kind2 == 'EJECT'
+    assert fields2 == {'work_id': 17, 'pos_3d_id': 2, 'receive_pos_id': 1}
+
+
+def test_build_action_result_event():
+    """Verify ROS 2 action result converts to robot-events SQS payload."""
+    evt = build_action_result_event(
+        action_kind='INSERT',
+        work_id=16,
+        success=True,
+        message='done',
+        work_type=Insert.Result.WORK_TYPE_INSERT,
+        robot_id='robot-arm-1',
+    )
+    assert evt['event_type'] == 'INSERT_COMPLETED'
+    assert evt['work_id'] == 16
+    assert evt['work_type'] == 'insert'
+    assert evt['success'] is True
+    assert evt['message'] == 'done'
